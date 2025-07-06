@@ -10,7 +10,7 @@ Repositorio abierto con apuntes, ejercicios, exámenes, prácticas y teoría del
 
 ## 📚 **Contenido del repositorio**
 
- - Estructura del repositorio (carpetas principales):
+Estructura del repositorio (carpetas principales):
 
 - **Base de datos** 
  
