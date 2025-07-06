@@ -1,0 +1,9 @@
+<!ELEMENT agenda (maximo?, persona*)>
+<!ELEMENT maximo (#PCDATA)>
+<!ELEMENT persona (nombre,(ciudad | cp), tfno+)>
+<!ATTLIST persona clase NMTOKEN #FIXED "contacto">
+<!ATTLIST persona tipo (1 | 2 | 3) #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT tfno (#PCDATA)>

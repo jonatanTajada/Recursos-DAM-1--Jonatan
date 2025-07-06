@@ -1,0 +1,32 @@
+/* Estilos para el tercer ejemplo */
+#contenedor {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px 50px 10px 50px;
+    border: 1px solid;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-right-style: dotted;
+    border-left-style: dotted;
+    border-top-color: red;
+    border-right-color: red;
+    border-bottom-color: green;
+    border-left-color: orange;
+  }
+  
+  #contenedor p {
+    width: 30%;
+    max-width: 300px;
+    padding: 25px 10px;
+    border: 2px solid red;
+  }
+  
+  #contenedor .segundo {
+    margin-left: 0; 
+  }
+
+  #contenedor .primero {
+    margin-left: calc(200px); 
+  }
+  

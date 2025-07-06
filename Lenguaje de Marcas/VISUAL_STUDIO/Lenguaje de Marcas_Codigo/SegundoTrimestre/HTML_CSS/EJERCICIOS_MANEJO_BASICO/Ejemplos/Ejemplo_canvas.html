@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+</head>
+<body>
+    <h2>Canvas Example</h2>
+
+    <!-- El elemento canvas donde se dibujará la gráfica -->
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+
+    <script>
+        // Obtén el elemento canvas y su contexto
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Dibuja un rectángulo en el canvas
+        ctx.fillStyle = "#FF0000"; // Color rojo
+        ctx.fillRect(50, 50, 100, 80); // Rectángulo en coordenadas (50, 50) con ancho 100 y altura 80
+    </script>
+</body>
+</html>

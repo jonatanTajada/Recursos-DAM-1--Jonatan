@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 45 de la Unidad 4 CSS</title>
+
+    <style>
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      #contenedor {
+        display: flex;
+        width: 100%;
+        background-color: yellow;
+      }
+
+      #contenedor div {
+        flex: 1;
+        border: 2px dotted #ccc; /* Borde de puntos */
+        margin: 0; /* Eliminamos el margen entre cajas */
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section id="contenedor">
+
+      <div>
+        <p>Texto del primer articulo</p>
+      </div>
+
+      <div>
+        <p>Texto del segundo articulo</p>
+      </div>
+
+      <div>
+        <p>Texto del tercer articulo</p>
+      </div>
+
+    </section>
+  </body>
+</html>

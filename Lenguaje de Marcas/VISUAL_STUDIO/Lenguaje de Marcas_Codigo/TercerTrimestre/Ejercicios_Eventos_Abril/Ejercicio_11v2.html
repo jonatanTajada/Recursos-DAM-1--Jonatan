@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responder pregunta sin números</title>
+</head>
+<body>
+
+<p>¿Cuál es tu nombre?</p>
+<input type="text" id="respuesta" placeholder="Ingresa tu nombre" pattern="[A-Za-z ]*" title="Solo se permiten letras" oninput="validarRespuesta()">
+
+<script>
+function validarRespuesta() {
+    var input = document.getElementById("respuesta");
+    var valor = input.value;
+    var soloLetras = /^[A-Za-z ]*$/;
+
+    if (!soloLetras.test(valor)) {
+        alert("Por favor, ingresa solo letras y espacios.");
+        input.value = ""; // Limpiar el campo
+    }
+}
+</script>
+
+</body>
+</html>

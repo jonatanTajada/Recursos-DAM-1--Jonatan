@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 11 - DOM b�sico</title>
+
+    <!-- <script type="text/javascript">
+
+	// Función que se ejecutará cuando la página se cargue completamente	
+	window.onload = function() {
+
+ // Obtener todos los enlaces de la página
+ var enlaces = document.getElementsByTagName("a");
+        
+        // 1. Número de enlaces de la página
+        var numEnlaces = enlaces.length;
+        console.log("Número de enlaces de la página: " + numEnlaces);
+        
+        // 2. Dirección a la que enlaza el penúltimo enlace
+        if (numEnlaces >= 2) {
+            var penultimoEnlace = enlaces[numEnlaces - 2];
+            var direccionPenultimoEnlace = penultimoEnlace.href;
+            console.log("Dirección del penúltimo enlace: " + direccionPenultimoEnlace);
+        } else {
+            console.log("No hay suficientes enlaces para obtener el penúltimo.");
+        }
+        
+        // 3. Numero de enlaces que enlazan a http://prueba
+        var numEnlacesPrueba = 0;
+        for (var i = 0; i < numEnlaces; i++) {
+            if (enlaces[i].href === "http://prueba/") {
+                numEnlacesPrueba++;
+            }
+        }
+        console.log("Número de enlaces que enlazan a http://prueba: " + numEnlacesPrueba);
+        
+        // 4. Número de enlaces del tercer párrafo
+        var tercerParrafo = document.getElementsByTagName("p")[2];
+        var enlacesTercerParrafo = tercerParrafo.getElementsByTagName("a");
+        var numEnlacesTercerParrafo = enlacesTercerParrafo.length;
+        console.log("Número de enlaces en el tercer párrafo: " + numEnlacesTercerParrafo);
+
+
+
+	
+	}
+	</script> -->
+  </head>
+
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet,
+      <a
+        href="javascript:if(confirm('http://prueba/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba/'"
+        tppabs="http://prueba/"
+        >consectetuer adipiscing elit</a
+      >. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu,
+      consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien
+      nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante,
+      ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl
+      elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+      faucibus ut, rhoncus non, mi.
+      <a
+        href="javascript:if(confirm('http://prueba2/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba2/'"
+        tppabs="http://prueba2/"
+        >Fusce porta</a
+      >. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat
+      arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+      consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque,
+      vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed
+      tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+      vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+      metus.
+    </p>
+
+    <p>
+      Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum ante ipsum
+      primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin
+      consequat auctor diam.
+      <a
+        href="javascript:if(confirm('http://prueba/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba/'"
+        tppabs="http://prueba/"
+        >Ut bibendum blandit est</a
+      >. Curabitur vestibulum. Nunc malesuada porttitor sapien. Aenean a lacus
+      et metus venenatis porta. Suspendisse cursus, sem non dapibus tincidunt,
+      lorem magna porttitor felis, id sodales dolor dolor sed urna. Sed rutrum
+      nulla vitae tellus. Sed quis eros nec lectus tempor lacinia. Aliquam nec
+      lectus nec neque aliquet dictum. Etiam
+      <a
+        href="javascript:if(confirm('http://prueba3/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba3/'"
+        tppabs="http://prueba3/"
+        >consequat sem quis massa</a
+      >. Donec aliquam euismod diam. In magna massa, mattis id, pellentesque sit
+      amet, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce
+      condimentum, arcu in scelerisque lobortis, ante arcu scelerisque mi, at
+      cursus mi risus sed tellus.
+    </p>
+
+    <p>
+      Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat massa,
+      at sollicitudin justo tellus vitae justo. Vestibulum aliquet, nulla sit
+      amet imperdiet suscipit, nunc erat laoreet est, a
+      <a
+        href="javascript:if(confirm('http://prueba/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba/'"
+        tppabs="http://prueba/"
+        >aliquam leo odio sed sem</a
+      >. Quisque eget eros vehicula diam euismod tristique. Ut dui. Donec in
+      metus sed risus laoreet sollicitudin. Proin et nisi non arcu sodales
+      hendrerit. In sem. Cras id augue eu lorem dictum interdum. Donec pretium.
+      Proin
+      <a
+        href="javascript:if(confirm('http://prueba4/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba4/'"
+        tppabs="http://prueba4/"
+        >egestas</a
+      >
+      adipiscing ligula. Duis iaculis laoreet turpis. Mauris mollis est sit amet
+      diam. Curabitur hendrerit, eros quis malesuada tristique, ipsum odio
+      euismod tortor, a vestibulum nisl mi at odio.
+      <a
+        href="javascript:if(confirm('http://prueba5/ \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address. \n\nDo you want to open it from the server?'))window.location='http://prueba5/'"
+        tppabs="http://prueba5/"
+        >Sed non lectus non est pellentesque</a
+      >
+      auctor.
+    </p>
+
+    <h1>Resultados del ejercicio DOM básico</h1>
+
+    <div id="resultados">
+      <p id="numEnlaces"></p>
+      <p id="direccionPenultimoEnlace"></p>
+      <p id="numEnlacesPrueba"></p>
+      <p id="numEnlacesTercerParrafo"></p>
+    </div>
+
+    <script>
+      alert(     "tengo que arreglar el tema de la consola no se porque no puedo, por eso lo hago por web y no por consola"    );
+
+      // Función que se ejecutará cuando la página se cargue completamente
+      window.onload = function () {
+        // Obtener todos los enlaces de la página
+        var enlaces = document.getElementsByTagName("a");
+
+        // 1. Número de enlaces de la página
+        var numEnlaces = enlaces.length;
+        document.getElementById("numEnlaces").innerHTML =
+          "Número de enlaces de la página: " + numEnlaces;
+
+        // 2. Dirección a la que enlaza el penúltimo enlace
+        if (numEnlaces >= 2) {
+          var penultimoEnlace = enlaces[numEnlaces - 2];
+          var textoPenultimoEnlace =
+            penultimoEnlace.innerText || penultimoEnlace.textContent;
+          document.getElementById("direccionPenultimoEnlace").innerHTML =
+            "Texto del penúltimo enlace: " + textoPenultimoEnlace;
+        } else {
+          document.getElementById("direccionPenultimoEnlace").innerHTML =
+            "No hay suficientes enlaces para obtener el penúltimo.";
+        }
+
+        // 3. Numero de enlaces que enlazan a http://prueba
+        var numEnlacesPrueba = 0;
+        for (var i = 0; i < numEnlaces; i++) {
+          if (enlaces[i].href === "http://prueba/") {
+            numEnlacesPrueba++;
+          }
+        }
+        document.getElementById("numEnlacesPrueba").innerHTML =
+          "Número de enlaces que enlazan a http://prueba: " + numEnlacesPrueba;
+
+        // 4. Número de enlaces del tercer párrafo
+        var tercerParrafo = document.getElementsByTagName("p")[2];
+        var enlacesTercerParrafo = tercerParrafo.getElementsByTagName("a");
+        var numEnlacesTercerParrafo = enlacesTercerParrafo.length;
+        document.getElementById("numEnlacesTercerParrafo").innerHTML =
+          "Número de enlaces en el tercer párrafo: " + numEnlacesTercerParrafo;
+      };
+    </script>
+  </body>
+</html>

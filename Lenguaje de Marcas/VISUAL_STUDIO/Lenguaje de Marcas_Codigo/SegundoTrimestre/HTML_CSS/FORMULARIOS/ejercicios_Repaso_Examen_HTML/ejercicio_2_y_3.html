@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Repaso html/css</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      section {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      article {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        margin: 10px;
+      }
+
+      section article:nth-child(2) {
+        background-image: url("../../ejercicios display/img/esfera-celeste-resplandeciente-orbita-galaxia-estrellada.avif");
+        background-size: cover;
+        background-position: center;
+        color: pink;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Encabezado</header>
+
+    <section>
+      <article>Contenido del primer artículo</article>
+      <article>Contenido del segundo artículo</article>
+    </section>
+
+    <footer>Pie de página</footer>
+  </body>
+</html>

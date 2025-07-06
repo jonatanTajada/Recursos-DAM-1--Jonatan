@@ -1,0 +1,18 @@
+
+<!ELEMENT Biblioteca (Lista_libros)>
+<!ELEMENT Lista_libros (Libro+)>
+<!ELEMENT Libro (Autor, Editorial)>
+<!ATTLIST Libro
+    titulo CDATA #REQUIRED
+    paginas CDATA #REQUIRED
+    >
+<!ELEMENT Autor (#PCDATA)>
+<!ELEMENT Editorial (#PCDATA)>
+
+<!-- 
+
+    solo añadirlo si esta de forma interna!
+    <!DOCTYPE Biblioteca [
+        
+    ]>        
+-->

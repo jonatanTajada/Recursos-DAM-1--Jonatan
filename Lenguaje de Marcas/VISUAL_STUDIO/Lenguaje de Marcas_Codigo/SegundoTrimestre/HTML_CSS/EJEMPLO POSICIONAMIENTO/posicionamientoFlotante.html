@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento Flotante</title>
+
+    <style>
+      .contenedor {
+        width: 400px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        overflow: hidden; /* Esto evita que el contenedor colapse debido a los flotantes */
+      }
+
+      .flotante-izquierda {
+        width: 150px;
+        height: 150px;
+        background-color: #3498db;
+        float: left; /* Flotar a la izquierda */
+        margin: 10px;
+      }
+
+      .flotante-derecha {
+        width: 150px;
+        height: 150px;
+        background-color: #e74c3c;
+        float: right; /* Flotar a la derecha */
+        margin: 10px;
+      }
+
+      .contenido {
+        margin: 10px;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="flotante-izquierda">Flotante Izquierda</div>
+
+      <div class="flotante-derecha">Flotante Derecha</div>
+
+      <div class="contenido">
+        <p>
+          Contenido que fluye alrededor de los elementos flotantes. Puedes
+          agregar más texto aquí.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+    
+El posicionamiento flotante en CSS se utiliza para mover un elemento hacia la izquierda o la derecha
+dentro de su contenedor, permitiendo que otros elementos fluyan alrededor de él. Esto es útil para 
+crear diseños más complejos y adaptativos.
+--------------------------------------------------------------------------------------------------------------------------
+
+En este ejemplo, hay dos elementos con las clases flotante-izquierda y flotante-derecha.
+Estos elementos están configurados para flotar a la izquierda y a la derecha, respectivamente.
+El contenido dentro del contenedor principal fluye alrededor de estos elementos flotantes.
+
+Es importante notar que después de flotar elementos, se utiliza la propiedad overflow: hidden; 
+en el contenedor principal para evitar que se colapse debido a los flotantes.
+
+El posicionamiento flotante es útil en situaciones donde deseas que los elementos se
+ubiquen uno al lado del otro y permitir que el resto del contenido se ajuste en torno a ellos.
+Sin embargo, se deben tener en cuenta algunas consideraciones, como el manejo del espacio y el
+cuidado con la limpieza de flotantes para evitar problemas de diseño.
+
+
+-->

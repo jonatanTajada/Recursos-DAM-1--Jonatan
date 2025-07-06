@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid blue;
+    }
+
+    th {
+      background-color: bisque;
+    }
+
+    tr:last-child td:last-child {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Mostrar Información de la matriz de componentes</h2>
+
+  <table id="componentes">
+    <tr>
+      <th>Nombre</th>
+      <th>Unidades</th>
+      <th>Precio Unitario</th>
+      <th>Total</th>
+    </tr>
+  </table>
+
+  <script>
+    // Lista de componentes
+    var componentes = [
+      { nombre: "Placa Base", unidades: 5, precioUnitario: 120.33 },
+      { nombre: "Memoria RAM", unidades: 12, precioUnitario: 44.21 },
+      { nombre: "Disco Duro", unidades: 7, precioUnitario: 93.47 },
+      { nombre: "Caja", unidades: 5, precioUnitario: 38.99 },
+      { nombre: "Monitor", unidades: 8, precioUnitario: 131.12 }
+    ];
+
+    // Metodo para mostrar listaComponentes
+    function mostrarComponentes() {
+      var tabla = document.getElementById("componentes");
+
+      for (var i = 0; i < componentes.length; i++) {
+        var componente = componentes[i];
+        var total = (componente.unidades * componente.precioUnitario).toFixed(2);
+
+        var fila = "<tr>" +
+          "<td>" + componente.nombre + "</td>" +
+          "<td>" + componente.unidades + "</td>" +
+          "<td>" + componente.precioUnitario + " €</td>" +
+          "<td>" + total + " €</td>" +
+          "</tr>";
+        tabla.innerHTML += fila;
+      }
+    }
+
+    // llamar al metodo
+    mostrarComponentes();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<frutas>
+
+    <fruta>
+        <nombre>cereza</nombre>
+    </fruta>
+
+    <fruta>
+        <nombre>naranja</nombre>
+    </fruta>
+
+</frutas>

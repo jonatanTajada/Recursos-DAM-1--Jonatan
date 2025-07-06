@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario ejercicio 59</title>
+  <link rel="stylesheet" href="ejercicio59.css" />
+</head>
+
+<body>
+  <h2>Formulario de Préstamo de Libros</h2>
+
+  <form>
+    <ul>
+      <li>
+        <label>Usuario:</label>
+        <input type="text" required />
+      </li>
+      <li>
+        <label>Clave:</label>
+        <input type="password" required />
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li>
+        <label>Título:</label>
+        <input type="text" placeholder="" required />
+      </li>
+      <li>
+        <label>Género:</label>
+        <select>
+          <option value="Astronomía" selected>Astronomía</option>
+          <option value="Literatura">Literatura</option>
+          <option value="Matem&acute;ticas">Matemáticas</option>
+          <option value="Historia">Historia</option>
+          <option value="Física">Física</option>
+        </select>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li>
+        <label>Fecha:</label>
+        <input type="date" placeholder="uno@gmail.com" required />
+      </li>
+      <li>
+        <label>Hora:</label>
+        <input type="time" />
+      </li>
+      <li>
+        <label>Días(0-10): </label>
+        <input type="range" min="0" max="10" value="7" required />
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li>
+        <label>Email:</label>
+        <input type="email" required />
+      </li>
+      <li>
+        <label>Sitio Web:</label>
+        <input type="url" />
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li>
+        <label>Observaciones:</label>
+        <textarea cols="40" rows="6"></textarea>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li>
+        <button type="submit">Enviar</button>
+      </li>
+      <li>
+        <button type="reset">Limpiar</button>
+      </li>
+    </ul>
+  </form>
+</body>
+
+</html>

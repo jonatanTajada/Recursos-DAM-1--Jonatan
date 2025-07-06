@@ -1,0 +1,177 @@
+/*------------- Estilo para el body--------------------- */
+body {
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+/*--------------------------------------------------------------------------------------------------------*/  
+             /* Estilo para el contenedor principal */
+  #contenedor-principal {
+    margin: 20px;
+  }
+  /*--------------------------------------------------------------------------------------------------------*/
+           /* Estilo para el cabecero */
+  #contenedor-interno {
+    background-color: #ddd;
+    border: 2px solid red;
+  }
+  
+  #header {
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #header img {
+    width: 70px;
+    height: 150px;
+  }
+  /*--------------------------------------------------------------------------------------------------------*/
+                     /* Estilo para el contenedor del nav */
+  #contenedor-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+/* Estilos para el contenedor del nav */
+#contenedor-nav {
+    height: 60px; /* Altura de 60 pixels */
+    border: 2px solid blue; /* Borde azul de 2 pixels */
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+    margin-right: 1px; /* Agrega un pequeño margen a la derecha para separarlo del contenedor section */
+}
+/* Estilos para los enlaces del nav */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%; /* Ajusta la altura al 100% del contenedor del nav */
+}
+
+#nav a {
+    margin-right: 5px; /* Espacio de 5 pixels entre los enlaces */
+    text-decoration: none;
+    color: black; /* Color del texto de los enlaces */
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+                /* Estilos para el contenedor de anuncios e información */
+  #espacioAnuncios,
+  #espacioInformacion {
+    box-sizing: border-box;
+    height: 400px;
+  }
+  
+/* Estilos para el contenedor de anuncios */
+#espacioAnucios {
+  width: 30%;
+  border: 2px solid black; /* Cambia "black" al color que desees, por ejemplo "#000" para negro en formato hexadecimal */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Estilos para la imagen dentro de #espacioAnuncios aside */
+#espacioAnucios img {
+  width: 250px;
+}
+
+/* Estilos para el párrafo dentro de #espacioAnuncios aside */
+#espacioAnucios p {
+  margin-top: 10px;
+}
+
+  #espacioAnuncios {
+    width: 30%;
+    border: 2px solid black;
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------*/
+                    /*espacio informacion*/
+  #espacioInformacion {
+    width: 70%;
+    border: 2px solid yellow;
+    display: flex;
+    gap: 10px; /* Espacio entre los dos contenedores internos */
+  }
+  
+  /* Estilos para los cuadros de dialogo de información */
+  .cuadroDialogo1,
+  .cuadroDialogo2 {
+    width: 50%; /* Ancho del 50% del contenedor de informacion */
+    height: 70%;
+    margin: 15px 10px;
+    border: 2px solid green;
+    box-sizing: border-box;
+    padding: 10px; /* Agregado para separar el contenido del borde */
+  }
+  
+  .cuadroDialogo1 img,
+  .cuadroDialogo2 img {
+    width: 180px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .cuadroDialogo1 p,
+  .cuadroDialogo2 p {
+    margin-top: 3px;
+    margin-bottom: 7px;
+    word-wrap: break-word;
+  }
+/*--------------------------------------------------------------------------------------------------------*/
+                /* Estilo para el contenedor del pie de pagina */
+/* Estilos para el pie de página */
+#contenedor-footer {
+  height: 100px; /* Ajusta la altura según tus necesidades */
+  border: 2px solid purple; /* Agrega un borde para visualización */
+}
+
+footer {
+  display: flex; /* Usa un contenedor flexible */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: space-between; /* Espacio entre los elementos */
+  padding: 0 20px; /* Agrega un relleno horizontal para separar del borde */
+}
+
+.imagen-correo img {
+  width: 40px; /* Ancho de la imagen */
+  height: 40px; /* Altura de la imagen */
+}
+
+.texto-correo {
+  display: flex; /* Usa un contenedor flexible para el texto y el enlace */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: flex-end; /* Alinea los elementos a la derecha */
+}
+
+.texto-correo p {
+  margin: 0; /* Elimina el margen predeterminado de <p> */
+}
+
+.texto-correo a {
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: black; /* Color del texto del enlace */
+}
+
+.texto-correo p {
+  margin: 0; /* Elimina el margen predeterminado de <p> */
+}
+
+.texto-correo a:hover {
+  color: blue; /* Cambia el color al pasar el ratón por encima */
+}
+
+.texto-correo a:visited {
+  color: purple; /* Cambia el color después de hacer clic en el enlace */
+}
+
+
+          
+                

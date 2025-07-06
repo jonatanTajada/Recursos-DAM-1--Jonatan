@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  form {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  fieldset {
+    border: 2px solid #007bff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  button {
+    padding: 12px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="reset"] {
+    background-color: #d1d1d1;
+    cursor: not-allowed;
+  }
+  
+  button[type="button"] {
+    background-color: #dc3545;
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: #0056b3;
+  }
+  
+  button[type="reset"]:hover,
+  button[type="reset"]:focus {
+    background-color: #d1d1d1;
+  }
+  
+  button[type="button"]:hover,
+  button[type="button"]:focus {
+    background-color: #c82333;
+  }
+  

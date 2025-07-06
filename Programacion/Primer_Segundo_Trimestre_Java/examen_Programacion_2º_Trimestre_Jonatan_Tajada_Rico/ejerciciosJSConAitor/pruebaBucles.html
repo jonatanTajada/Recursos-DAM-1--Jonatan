@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+</head>
+<body>
+
+    <h2>Ejercicios de bucles</h2>
+
+    <h3>Bucle while</h3>
+    <p id="while-loop-results"></p>
+    <script>
+        // Ejercicio 1: Imprimir los números del 1 al 5 utilizando un bucle while
+        let contador1 = 1;
+        let whileResult1 = '';
+        while (contador1 <= 5) {
+            whileResult1 += contador1 + ' ';
+            contador1++;
+        }
+        document.getElementById('while-loop-results').innerHTML += whileResult1 + '<br>';
+
+        // Ejercicio 2: Calcular la suma de los primeros 10 números naturales utilizando un bucle while
+        let suma1 = 0;
+        let i = 1;
+        while (i <= 10) {
+            suma1 += i;
+            i++;
+        }
+        document.getElementById('while-loop-results').innerHTML += 'La suma de los primeros 10 números naturales es: ' + suma1 + '<br>';
+
+        // Ejercicio 3: Pedir al usuario un número y mostrar los números del 1 hasta ese número utilizando un bucle while
+        let limite = parseInt(prompt("Ingrese un número límite:"));
+        let contador2 = 1;
+        let whileResult2 = 'Números del 1 al ' + limite + ': ';
+        while (contador2 <= limite) {
+            whileResult2 += contador2 + ' ';
+            contador2++;
+        }
+        document.getElementById('while-loop-results').innerHTML += whileResult2 + '<br>';
+    </script>
+
+    <h3>Bucle do while</h3>
+    <p id="do-while-loop-results"></p>
+    
+    <script>
+        // Ejercicio 1: Imprimir los números del 1 al 5 utilizando un bucle do while
+        let contador3 = 1;
+        let doWhileResult1 = '';
+        do {
+            doWhileResult1 += contador3 + ' ';
+            contador3++;
+        } while (contador3 <= 5);
+        document.getElementById('do-while-loop-results').innerHTML += doWhileResult1 + '<br>';
+
+        // Ejercicio 2: Pedir al usuario que ingrese un número mayor que 100 utilizando un bucle do while
+        let numero;
+        do {
+            numero = parseInt(prompt("Ingrese un número mayor que 100:"));
+        } while (numero <= 100);
+        document.getElementById('do-while-loop-results').innerHTML += '¡Has ingresado un número mayor que 100!' + '<br>';
+
+        // Ejercicio 3: Calcular la suma de los números pares del 1 al 10 utilizando un bucle do while
+        let suma2 = 0;
+        let j = 2;
+        do {
+            suma2 += j;
+            j += 2;
+        } while (j <= 10);
+        document.getElementById('do-while-loop-results').innerHTML += 'La suma de los números pares del 1 al 10 es: ' + suma2 + '<br>';
+    </script>
+
+    <h3>Bucle for</h3>
+    <p id="for-loop-results"></p>
+    <script>
+        // Ejercicio 1: Imprimir los números del 1 al 5 utilizando un bucle for
+        let forResult1 = '';
+        for (let contador4 = 1; contador4 <= 5; contador4++) {
+            forResult1 += contador4 + ' ';
+        }
+        document.getElementById('for-loop-results').innerHTML += forResult1 + '<br>';
+
+        // Ejercicio 2: Calcular el factorial de un número ingresado por el usuario utilizando un bucle for
+        let factorial = 1;
+        let numFactorial = parseInt(prompt("Ingrese un número para calcular su factorial:"));
+        for (let k = 1; k <= numFactorial; k++) {
+            factorial *= k;
+        }
+        document.getElementById('for-loop-results').innerHTML += 'El factorial de ' + numFactorial + ' es: ' + factorial + '<br>';
+
+        // Ejercicio 3: Imprimir los números del 10 al 1 en orden descendente utilizando un bucle for
+        let forResult2 = '';
+        for (let contador5 = 10; contador5 >= 1; contador5--) {
+            forResult2 += contador5 + ' ';
+        }
+        document.getElementById('for-loop-results').innerHTML += forResult2 + '<br>';
+    </script>
+
+</body>
+</html>

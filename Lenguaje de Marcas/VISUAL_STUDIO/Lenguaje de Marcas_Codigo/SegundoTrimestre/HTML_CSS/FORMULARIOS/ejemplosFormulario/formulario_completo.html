@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formulario Completo</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <form>
+
+      <fieldset>
+        <legend>Información Personal</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="genero">Género:</label>
+        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+        <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información de Contacto</legend>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+
+        <label>¿Qué dispositivos utilizas?</label>
+        <label><input type="checkbox" name="dispositivos" value="computadora"> Computadora</label>
+        <label><input type="checkbox" name="dispositivos" value="smartphone"> Smartphone</label>
+        <label><input type="checkbox" name="dispositivos" value="tablet"> Tablet</label>
+
+        <label for="preferencias">Preferencias adicionales:</label>
+
+        <select id="preferencias" name="preferencias">
+          <option value="opcion1">Opción 1</option>
+          <option value="opcion2">Opción 2</option>
+          <option value="opcion3">Opción 3</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Seguridad</legend>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fecha de Nacimiento</legend>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+      </fieldset>
+
+      <fieldset>
+        <legend>Rango de Experiencia (1-10)</legend>
+
+        <label for="experiencia">Experiencia:</label>
+        <input type="range" id="experiencia" name="experiencia" min="1" max="10" step="1" value="5">
+      </fieldset>
+
+      <div class="botones">
+        <button type="reset" disabled>Resetear</button>
+        <button type="submit">Enviar</button>
+        <button type="button" id="btnBorrar">Borrar</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

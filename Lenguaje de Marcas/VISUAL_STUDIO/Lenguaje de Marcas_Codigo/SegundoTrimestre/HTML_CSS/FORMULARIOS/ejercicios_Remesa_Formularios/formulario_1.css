@@ -1,0 +1,82 @@
+body{
+    margin: 2px;
+    padding: 2px;
+    background-image: url(../../EJERCICIOS_DISPLAY/img/busto\ cesar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*H1*/
+h1{
+    color: blue;
+    background: radial-gradient(yellow, green, red);
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+    width: 700px;
+    position: absolute;
+    left: 650px;
+    padding-top: 5px;
+}
+
+form{
+    display: block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 65px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    position: absolute;
+    top: 120px;
+    left: 700px;
+}
+
+#seccion_idiomas{
+    padding-bottom: 15px;
+}
+
+#seccion_conectores{
+    padding-bottom: 35px;
+}
+
+#seccion_datosPersonales{
+    margin-bottom: 15px;
+}
+
+#seccion_rellenar{
+    margin-bottom: 25px;
+
+}
+
+#seccion_fecha{
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+#seccion_enviar{
+    margin-top: 25px;
+    position: relative;
+    left: 470px;
+    
+}
+
+#seccion_enviar input{
+    width: 100px;
+    background-color: aqua;
+    font-weight: bold;
+}
+
+#seccion_preferencias fieldset{
+    height: 250px;
+}
+
+#seccion_sexo{
+    margin-top: 15px;
+}
+
+
+
+
+

@@ -1,0 +1,13 @@
+casa;house
+perro;dog
+árbol;tree
+Perro;Dog
+Gato;Cat
+Árbol;Tree
+Mesa;Table
+Silla;Chair
+Coche;Car
+Libro;Book
+Pluma;Pen
+Computadora;Computer
+

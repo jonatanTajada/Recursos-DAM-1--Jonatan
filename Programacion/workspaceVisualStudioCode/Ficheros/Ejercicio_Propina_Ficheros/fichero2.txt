@@ -1,0 +1,4 @@
+Y este es el texto del fichero 2.
+Incluye diferentes líneas.
+Este fichero también será mezclado.
+Puedes añadir más líneas aquí.

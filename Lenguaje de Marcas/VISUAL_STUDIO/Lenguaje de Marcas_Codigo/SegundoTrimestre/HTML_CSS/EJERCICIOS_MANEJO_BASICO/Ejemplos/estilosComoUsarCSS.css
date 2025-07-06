@@ -1,0 +1,42 @@
+/* Estilos para el texto principal */
+body {
+    color: #00F; /* Color del texto azul */
+    background-color: #CFC; /* Color de fondo verde claro */
+    font-family: 'Georgia', 'Cambria', serif; /* Tipo de letra */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilos para los campos de datos del libro */
+.datosLista li {
+    color: blue; /* Color del texto blanco */
+}
+
+
+/* Estilos para el encabezado de nivel 1 */
+#tituloPrincipal {
+    color: #F00; /* Color del texto rojo claro */
+    font-family: 'Verdana', 'Calibri', sans-serif; /* Tipo de letra */
+    font-size: 32px; /* Tamaño del texto */
+}
+
+/* Estilos para el encabezado de nivel 2 */
+h2 {
+    color: #A00; /* Color del texto rojo oscuro */
+    font-family: 'Verdana', 'Calibri', sans-serif; /* Tipo de letra */
+    font-size: 24px; /* Tamaño del texto */
+}
+
+
+/* Estilos para "Internet" y "Web" como sustantivos */
+p strong {
+    font-size: 20px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para "Hypertext Markup Language" y "Cascading Style Sheets" */
+/* Acrónimos HTML y CSS */
+p em, p strong em {
+    color: #FFF; /* Color del texto blanco */
+    background-color: #000; /* Color de fondo negro */
+    font-style: italic; /* Texto en cursiva */
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio de color al pasar el ratón</title>
+<style>
+    #bloque {
+        width: 200px;
+        height: 100px;
+        background-color: white;
+        text-align: center;
+        line-height: 100px;
+        border: 1px solid black;
+    }
+</style>
+<script>
+    window.addEventListener("load", function() {
+        var bloque = document.getElementById("bloque");
+
+        bloque.addEventListener("mouseenter", function() {
+            this.style.backgroundColor = "red";
+        });
+
+        bloque.addEventListener("mouseleave", function() {
+            this.style.backgroundColor = "white";
+        });
+    });
+</script>
+</head>
+<body>
+
+<div id="bloque">Pasa el ratón aquí</div>
+
+</body>
+</html>

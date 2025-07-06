@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5.</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: yellow;
+        padding: 10px;
+        text-align: center;
+      }
+
+      header a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      section {
+        padding: 20px;
+        background-color: silver;
+      }
+
+      article {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="https://www.educacionyfp.gob.es/portada.html" target="_blank">CFMG de Sistemas Microinformáticos y Redes</a>
+      </h1>
+      <img src="../../Ejercicios display/img/logo ISEP-CEU.png" alt="Logo de ISEP-CEU" style="height: 50px" />
+      <h2>
+        <a href="mailto:jonatan@gmail.com">Nombre tutor: Jonatan Tajada</a>
+      </h2>
+    </header>
+
+    <nav>
+      <a href="#asignatura1">Asignatura 1</a>
+      <a href="#asignatura2">Asignatura 2</a>
+      <a href="#asignatura3">Asignatura 3</a>
+    </nav>
+
+    <section>
+      <article id="asignatura1">
+        <h3>Asignatura 1</h3>
+        <p>Profesor: Blanca</p>
+        <p>Curso: 1º</p>
+      </article>
+
+      <article id="asignatura2">
+        <h3>Asignatura 2</h3>
+        <p>Profesor: Irati</p>
+        <p>Curso: 2º</p>
+      </article>
+
+      <article id="asignatura3">
+        <h3>Asignatura 3</h3>
+        <p>Profesor: Mikel</p>
+        <p>Curso: 1º o 2º</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> <br />Nombre alumno: Juan Perez</p>
+
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

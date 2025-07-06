@@ -1,0 +1,109 @@
+body{
+padding: 0px;
+margin: 0px;
+background-color: white;
+display: block;
+left:  50px;
+background-color: dimgrey;
+}
+
+/*ELEMENTO <FORM>*/
+form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    width: 1000px;
+    height: 800px;
+    background-color: white;
+    
+}
+
+.contenedorDireccion{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+/*header*/
+ .contenedorNombre header{
+    text-align: left;
+    font-size: 30px;
+    background-color: white;
+    padding-bottom: 0px;
+
+ }
+
+
+
+/*ELEMENTO <LABEL>*/
+label{
+    font-weight: bolder;
+    background-color: aquamarine;
+    margin: 90px;
+} 
+
+.input{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 400px;
+height: 100%;
+padding: 10px;
+box-sizing: border-box;
+position: relative;
+left: 250px;
+}
+
+  .input input {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black; /* Borde original */
+    background-color: white; /* Fondo blanco */
+  }
+  
+  .input input:hover,
+  .input input:focus {
+    border: 2px solid red; /* Cambia el color y grosor del borde solo para el input que tiene el foco o sobre el que pasa el ratón */
+    background-color: white;
+  }
+  
+.contenedorNombre:hover,
+.contenedorNombre:focus,
+.contenedorDireccion:hover,
+.contenedorDireccion:focus,
+.contenedorEmail:hover,
+.contenedorEmail:focus,
+.contenedorTelefono:hover,
+.contenedorTelefono:focus,
+.contenedorFooter:hover,
+.contenedorFooter:focus
+{
+background-color: yellow;
+}
+
+footer{
+   display: block;
+
+}
+
+footer button{
+    display: flex;
+    position: absolute;
+    top: 700px;
+    right: 100px;
+    text-align: left;
+    height: 40px;
+    width: 200px;
+    text-align: left;
+    background-color: silver;
+    font-weight: bolder;
+    align-items: center;
+}
+
+footer button:hover,
+footer button:focus{
+    background-color: aqua;
+    border: 2px solid red;
+}

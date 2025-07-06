@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onmouseover</title>
+</head>
+<body>
+    <h1>Evento onmouseover</h1>
+    <div id="caja" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+    <p>¡Pasa el mouse sobre la caja!</p>
+
+  
+<script>
+
+const caja = document.getElementById('caja');
+
+//metodo cambiaColor
+function cambiarColor(){
+    caja.style.background = 'blue';
+}
+
+// metodo colorOriginal
+function colorOriginal(){
+    caja.style.background = 'lightblue';
+}
+
+//1º opcion
+//caja.onmouseover = cambiarColor;
+//caja.onmouseout = colorOriginal;
+
+
+
+//2º opcion
+caja.addEventListener('mouseover', cambiarColor);
+caja.addEventListener('mouseout', colorOriginal);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

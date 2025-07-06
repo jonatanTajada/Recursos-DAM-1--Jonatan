@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listafacturas>
+    <factura fecha="2023-10-20">
+        <emisor cif="123456777A">
+            <nombre>Emisor 1</nombre>
+            <volumenventas>100000</volumenventas>
+        </emisor>
+        <pagador cif="123456788B">
+            <nombre>Pagador 1</nombre>
+        </pagador>
+        <importe>500.00</importe>
+    </factura>
+    <factura>
+        <emisor cif="987654321X">
+            <nombre>Emisor 2</nombre>
+        </emisor>
+        <pagador cif="123456789Y">
+            <nombre>Pagador 2</nombre>
+        </pagador>
+        <importe>750.00</importe>
+    </factura>
+</listafacturas>

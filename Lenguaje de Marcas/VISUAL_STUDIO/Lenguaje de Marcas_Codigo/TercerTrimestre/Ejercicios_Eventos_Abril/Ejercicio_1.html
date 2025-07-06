@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio de eventos</title>
+</head>
+<body>
+
+<h1>Ejercicio de eventos</h1>
+<p>Este es un párrafo de texto.</p>
+<p>Este es otro párrafo de texto.</p>
+<img id="imagen" src="imagens_JS.jpg" alt="Imagen original">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener la referencia a la imagen
+    var imagen = document.getElementById("imagen");
+    
+    // Guardar la URL de la imagen original
+    var imagenOriginalSrc = imagen.src;
+    
+    // URL de la imagen a mostrar al pasar el ratón sobre ella
+    var nuevaImagenSrc = "imagen_JS_2.png";
+    
+    // Agregar el evento onmouseover
+    imagen.onmouseover = function() {
+        // Cambiar la imagen al pasar el ratón sobre ella
+        imagen.src = nuevaImagenSrc;
+    };
+    
+    // Agregar el evento onmouseout
+    imagen.onmouseout = function() {
+        // Volver a la imagen original al salir del espacio de la imagen
+        imagen.src = imagenOriginalSrc;
+    };
+});
+</script>
+
+</body>
+</html>

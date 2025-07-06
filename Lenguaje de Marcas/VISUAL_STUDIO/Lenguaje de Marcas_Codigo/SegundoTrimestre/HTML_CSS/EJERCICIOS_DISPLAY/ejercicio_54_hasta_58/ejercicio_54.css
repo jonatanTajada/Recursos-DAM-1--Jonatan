@@ -1,0 +1,229 @@
+body{
+   background-image: url(../img/coliseo_fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*cabecera coliseo romano*/
+#cabecera_pagina {
+    font-family: 'Times New Roman', Times, serif;
+    border: 4px solid blue;
+    border-radius: 25px;
+    box-shadow: 20px 10px 10px red;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    background-image: url(../img/coliseo_titulo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    left: 650px;
+    top: 100px;
+}
+
+/*estilos del nav-aside enlaces*/
+
+#contenedor_principal{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 200px;
+    background-image: url(../img/coliseo_titulo.jpeg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center ;
+    border: 4px solid yellow;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    
+}
+
+#cabecera_enlace{
+    background-color: orange;
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin-top:8px ;
+    font-weight: bold;
+    
+}
+
+span{
+    height: 25px;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    display: block;
+    margin-bottom: 2px;
+    
+}
+aside span{
+    position: relative;
+    top: 30px;
+}
+
+aside ul{
+    position: relative;
+    top: 30px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+/*'section' - 'article'*/
+
+section{
+    display: inline-block;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    width: 1000px;
+    height: 400px;
+
+}
+
+article{
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: #b2e8b2;
+   overflow: auto;/* Hace que el contenido se ajuste y se añada una barra de desplazamiento si es necesario */
+   ;
+
+}
+
+/*contenedor: article caracteristicas /espectaculos/remodelaciones*/
+article.caracteristicas {
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: #b2e8b2;
+    overflow: auto;
+    position: relative; /* Cambiado a relative para contener a los elementos hijos */
+    margin-bottom: 10px;
+}
+
+.imagenes {
+    width: 60px;
+    margin-top: 5px;
+    float: left; /* Hace que la imagen flote a la derecha */
+    margin-left: 10px; /* Ajusta según sea necesario */
+}
+
+div.parrafos {
+    overflow: hidden; /* Limpia los flotadores y permite que el div envuelva al texto */
+}
+
+/* Elimina el float derecho de la clase parrafos, ya que la imagen está flotando a la derecha */
+section div.parrafos {
+    float: none;
+}
+
+/*-------------------------------------------*/
+article.espectaculos{
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: #b2e8b2;
+    overflow: auto;
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+article.remodelaciones{
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: #b2e8b2;
+    overflow: auto;
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+
+
+
+/*contenedor roma aside right*/
+#contenedor_principal2{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 200px;
+    background: radial-gradient( blue , yellow , green )  ;
+    background-size: 400px;
+    background-position: center ;
+    border: 4px solid yellow;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    top: 400px;
+    left: 1400px;
+    
+}
+
+#cabecera_enlace2{
+    background-color: orange;
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin-top:8px ;
+    font-weight: bold;
+    
+}
+
+span{
+    height: 25px;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    display: block;
+    margin-bottom: 2px;
+    
+}
+aside span{
+    position: relative;
+    top: 30px;
+}
+
+aside ul{
+    position: relative;
+    top: 50px;
+    left: -15px;
+}
+
+aside ul img{
+    width: 75px;
+    height: 75px;
+    
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+/*footer*/
+#contenedor_footer{
+    border: 1px solid red;
+    background-color: #FFCCCC;
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    top: 800px;
+    margin-top: 15px;
+}
+
+footer{
+    font-weight: bold;
+}
+

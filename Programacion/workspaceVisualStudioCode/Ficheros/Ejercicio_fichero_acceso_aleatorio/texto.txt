@@ -1,0 +1,8 @@
+Este es un texto de ejemplo para probar el PROGRAMA.
+Vamos a introducir varias palabras diferentes para que el PROGRAMA pueda buscarlas y modificarlas.
+La palabra "PROGRAMA" aparece varias veces en este texto, asi que sera modificada a "PROGRAMA".
+Tambien tenemos otras palabras como "texto", "palabra" y "modificar", que seran convertidas a mayusculas si se encuentran.
+Espero que este texto sea util para tus pruebas.
+
+
+JONATAN tajada rico.

@@ -1,0 +1,98 @@
+/* Estilo para el body */
+body {
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+#contenedor-principal {
+    margin: 20px;
+}
+
+/* Estilo para el cabecero */
+#contenedor-interno {
+    background-color: #ddd;
+    border: 2px solid red;
+}
+
+#header {
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header img {
+    width: 70px;
+    height: 150px;
+}
+
+/* Estilo para el contenedor del nav */
+#contenedor-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilos para el contenedor de anuncios e información */
+#espacioAnuncios,
+#espacioInformacion {
+    box-sizing: border-box;
+    height: 400px;
+}
+
+/* Estilos para el contenedor de anuncios */
+#espacioAnuncios {
+    width: 30%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+}
+
+/* Estilos para la imagen dentro de #espacioAnuncios aside */
+#espacioAnuncios img {
+    width: 100%;
+}
+
+/* Estilos para el párrafo dentro de #espacioAnuncios aside */
+#espacioAnuncios p {
+    margin-top: 10px;
+}
+
+#espacioInformacion {
+    width: 70%;
+    border: 2px solid yellow;
+    box-sizing: border-box;
+    height: 100%; /* Añade esta línea para que tenga la misma altura que el contenedor padre */
+}
+
+/* Estilos para los cuadros de diálogo de información */
+.cuadroDialogo1,
+.cuadroDialogo2 {
+    width: 50%; /* Ancho del 50% del contenedor de información */
+    height: 70%;
+    margin: 15px 10px;
+    border: 2px solid green;
+    box-sizing: border-box;
+    padding: 10px; /* Agregado para separar el contenido del borde */
+}
+
+.cuadroDialogo1 img,
+.cuadroDialogo2 img {
+    width: 180px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.cuadroDialogo1 p,
+.cuadroDialogo2 p {
+    margin-top: 3px;
+    margin-bottom: 7px;
+    word-wrap: break-word;
+}

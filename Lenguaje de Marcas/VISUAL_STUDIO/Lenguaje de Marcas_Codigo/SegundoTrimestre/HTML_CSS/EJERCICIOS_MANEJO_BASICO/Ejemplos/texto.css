@@ -1,0 +1,44 @@
+/* texto.css */
+
+/* Estilos para los elementos article */
+.izquierda,
+.derecha,
+.centro,
+.justificado {
+  margin: 0; 
+}
+
+.izquierda {
+  text-align: left;
+}
+
+.derecha {
+  text-align: right;
+}
+
+.centro {
+  text-align: center;
+}
+
+.justificado {
+  text-align: justify;
+}
+
+/* Estilos para los textos en los elementos article */
+.izquierda, .derecha {
+  text-indent: 2px;
+  font-size: 8px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.centro {
+  font-weight: bold;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  text-decoration: underline;
+}
+
+.justificado {
+  font-style: italic;
+  font-family: Verdana, sans-serif;
+}

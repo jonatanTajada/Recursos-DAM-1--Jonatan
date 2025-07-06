@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+ 
+<listacursos>
+    <curso>
+        <alumno>
+            <DNI>12345670A</DNI>
+            <nombre>Jonatan</nombre>
+            <apellido>Pérez</apellido>
+            <asignaturas>
+                <asignatura codigo="BBDD001">
+                    <nombre>BBDD</nombre>
+                    <profesor>
+                        <NRP>12345</NRP>
+                        <nombre>Blanca</nombre>
+                        <apellido>Lopez</apellido>
+                    </profesor>
+                </asignatura>
+                <asignatura codigo="Programacion001">
+                    <nombre>Programacion</nombre>
+                    <profesor>
+                        <NRP>54321</NRP>
+                        <nombre>Jony</nombre>
+                        <apellido>Martínez</apellido>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+    </curso>
+</listacursos>

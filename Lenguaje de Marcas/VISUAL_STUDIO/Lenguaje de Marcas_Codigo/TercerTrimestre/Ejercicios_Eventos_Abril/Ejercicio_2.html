@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con validaciones</title>
+    <style>
+      .warning {
+        border: 1px solid red;
+      }
+      .warning-message {
+        color: red;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario con validaciones</h1>
+    <p>Este es un párrafo de texto.</p>
+    <p>Este es otro párrafo de texto.</p>
+
+    <form id="myForm">
+      <label for="nombre">Nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" /><br />
+      <span id="nombreError" class="warning-message"></span><br /><br />
+
+      <label for="apellidos">Apellidos:</label><br />
+      <input type="text" id="apellidos" name="apellidos" /><br /><br />
+
+      <label for="edad">Edad:</label><br />
+      <input type="number" id="edad" name="edad" /><br />
+      <span id="edadError" class="warning-message"></span><br /><br />
+
+      <label for="email">Correo electrónico:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <span id="emailError" class="warning-message"></span><br /><br />
+
+      <button type="submit">Enviar</button>
+      <button type="button" onclick="cancelar()">Cancelar</button>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+          var nombre = document.getElementById("nombre");
+          var apellidos = document.getElementById("apellidos");
+          var edad = document.getElementById("edad");
+          var email = document.getElementById("email");
+
+          var nombreValido = validarCampo(nombre);
+          var edadValida = validarEdad(edad);
+          var emailValido = validarEmail(email);
+
+          if (!nombreValido || !edadValida || !emailValido) {
+            event.preventDefault();
+          }
+        });
+
+        function validarCampo(input) {
+          if (input.value.trim() === "") {
+            input.classList.add("warning");
+            document.getElementById(input.id + "Error").textContent =
+              "Este campo es obligatorio";
+            return false;
+          } else {
+            input.classList.remove("warning");
+            document.getElementById(input.id + "Error").textContent = "";
+            return true;
+          }
+        }
+
+        function validarEdad(input) {
+          if (input.value <= 0) {
+            input.classList.add("warning");
+            document.getElementById(input.id + "Error").textContent =
+              "La edad debe ser mayor que cero";
+            return false;
+          } else {
+            input.classList.remove("warning");
+            document.getElementById(input.id + "Error").textContent = "";
+            return true;
+          }
+        }
+
+        function validarEmail(input) {
+          var email = input.value.trim();
+          var atPosition = email.indexOf("@");
+          var dotPosition = email.lastIndexOf(".");
+
+          if (email === "") {
+            input.classList.add("warning");
+            document.getElementById(input.id + "Error").textContent =
+              "Este campo es obligatorio";
+            return false;
+          } else if (
+            atPosition < 1 ||
+            dotPosition < atPosition + 2 ||
+            dotPosition + 2 >= email.length
+          ) {
+            input.classList.add("warning");
+            document.getElementById(input.id + "Error").textContent =
+              "Ingrese un correo electrónico válido";
+            return false;
+          } else {
+            input.classList.remove("warning");
+            document.getElementById(input.id + "Error").textContent = "";
+            return true;
+          }
+        }
+
+        function cancelar() {
+          document.getElementById("myForm").reset();
+          var inputs = document.getElementsByTagName("input");
+          for (var i = 0; i < inputs.length; i++) {
+            inputs[i].classList.remove("warning");
+            document.getElementById(inputs[i].id + "Error").textContent = "";
+          }
+        }
+
+        var inputs = document.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+          inputs[i].addEventListener("focus", function () {
+            this.classList.remove("warning");
+            document.getElementById(this.id + "Error").textContent = "";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

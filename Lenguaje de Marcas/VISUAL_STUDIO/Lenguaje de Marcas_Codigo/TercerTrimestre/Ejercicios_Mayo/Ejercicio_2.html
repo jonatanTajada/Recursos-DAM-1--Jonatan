@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de Días</title>
+  </head>
+  <body>
+    <h1>Contador de Días</h1>
+
+    <script>
+      function contarDias(fechaString) {
+        // Convertir la cadena de fecha a objeto Date
+        const meses = {
+          enero: 0,
+          febrero: 1,
+          marzo: 2,
+          abril: 3,
+          mayo: 4,
+          junio: 5,
+          julio: 6,
+          agosto: 7,
+          septiembre: 8,
+          octubre: 9,
+          noviembre: 10,
+          diciembre: 11,
+        };
+
+        const partes = fechaString.split(" ");
+        const dia = parseInt(partes[0], 10);
+        const mes = meses[partes[1].toLowerCase()];
+        const año = parseInt(partes[2], 10);
+
+        // Verificar si la fecha es válida
+        if (isNaN(dia) || isNaN(mes) || isNaN(año)) {
+          return false; // Si no es válida, devolver false
+        } else {
+          // Calcular la diferencia de tiempo entre la fecha introducida y la fecha actual
+          const hoy = new Date();
+          const fecha = new Date(año, mes, dia);
+          const diferenciaTiempo = hoy.getTime() - fecha.getTime();
+          // Convertir la diferencia de tiempo a días
+          const diasPasados = Math.floor(
+            diferenciaTiempo / (1000 * 60 * 60 * 24)
+          );
+          return diasPasados; // Devolver el número de días pasados
+        }
+      }
+
+      // Pedir al usuario que introduzca la fecha
+      const fechaInput = prompt(
+        "Introduce una fecha en formato dd mes aaaa (por ejemplo, 23 abril 2008):"
+      );
+
+      // Calcular el número de días pasados y mostrar el resultado en un cuadro de mensaje
+      const diasPasados = contarDias(fechaInput);
+      if (diasPasados === false) {
+        alert("La fecha introducida no es válida.");
+      } else {
+        alert(`Han pasado ${diasPasados} días desde la fecha introducida.`);
+      }
+    </script>
+  </body>
+</html>

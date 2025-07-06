@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento Clic</title>
+</head>
+
+<body>
+
+    <button id="miBoton">Hacer clic</button>
+
+    <h1>Suma con JavaScript</h1>
+    <button id="sumar">Sumar</button>
+    <p>Resultado: <span id="resultado">0</span></p>
+
+
+    <script>
+        //---------------------------------------------------------------------------------------
+        document.getElementById("miBoton").addEventListener("click", function () {
+            alert('has hecho click');
+        });
+        //--------------------------------------------------------------------------------
+            // sumar cliks
+        const botonSumar = document.getElementById('sumar');
+        const contador = document.getElementById('resultado');
+        let resultado = 0;
+
+        function sumar() {
+            resultado++;
+            contador.textContent = resultado;
+        }
+
+        botonSumar.addEventListener('click', sumar);
+//------------------------------------------------------------------------------------------------------------------------
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

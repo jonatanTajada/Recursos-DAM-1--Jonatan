@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 1</title>
+  <link rel="stylesheet" href="formulario_1.css">
+</head>
+
+
+<body>
+
+  <h1>FORMULARIO</h1>
+
+  <form action="#" method="post">
+
+    <div id="seccion_rellenar">
+
+      <fieldset>
+        <legend>Rellenar</legend>
+
+        <div id="seccion_idiomas">
+          <p>Selecciona idioma:</p>
+          <label for="idiomas">Ingles</label>
+          <input type="radio" name="idiomas" value="ingles"><br>
+          <label for="idiomas">Aleman</label>
+          <input type="radio" name="idiomas" value="Alemán"><br>
+          <label for="idiomas">Frances</label>
+          <input type="radio" name="idiomas" value="Francés"><br>
+        </div>
+
+        <div id="seccion_conectores">
+          <select name="conector" id="conector">
+            <option value="usb">USB</option>
+            <option value="paralelo">Paralelo</option>
+            <option value="ps2">PS2</option>
+          </select>
+        </div>
+
+        <div id="seccion_datosPersonales">
+          <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos">
+        </div>
+
+      </fieldset>
+    </div>
+<!----------------------------------------------------------->
+    <div id="seccion_preferencias">
+
+      <fieldset>
+        <legend>Indique sus preferencias por favor</legend>
+
+
+       <div id="seccion_sexo"> 
+        <label>
+          <input type="checkbox" name="sexo" value="hombre">Hombre
+        </label>
+        <label>
+          <input type="checkbox" name="sexo" value="mujer">Mujer
+        </label>
+       </div>
+
+       <div id="seccion_fecha">
+        <label for="fecha">Elija fecha:</label>
+        <input type="date" name="fecha" id="fecha">
+       </div>
+
+      </fieldset>
+    </div>
+
+    <div id="seccion_enviar">
+      <input type="submit" value="Enviar">
+    </div>
+
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análisis de Texto</title>
+  </head>
+  <body>
+    <h1>Análisis de Texto</h1>
+
+    <script>
+      // Leer una cadena de texto y generar un array con las palabras que contiene
+      const texto = prompt("Introduce una frase:");
+      const palabras = texto.split(" ");
+
+      // Número de palabras
+      const numeroPalabras = palabras.length;
+
+      // Primera palabra y última palabra
+      const primeraPalabra = palabras[0];
+      const ultimaPalabra = palabras[palabras.length - 1];
+
+      // Las palabras colocadas en orden inverso
+      const palabrasInverso = palabras.slice().reverse();
+
+      // Las palabras ordenadas de la a la z
+      const palabrasOrdenadasAZ = palabras
+        .slice()
+        .sort((a, b) => a.localeCompare(b, "es", { ignorePunctuation: true }));
+
+      // Las palabras ordenadas de la z a la a
+      const palabrasOrdenadasZA = palabras
+        .slice()
+        .sort((a, b) => b.localeCompare(a, "es", { ignorePunctuation: true }));
+
+      // Un mensaje indicando si la frase es un palíndromo
+      const esPalindromo =
+        texto.toLowerCase().replace(/[^a-záéíóúüñ]/g, "") ===
+        texto
+          .toLowerCase()
+          .replace(/[^a-záéíóúüñ]/g, "")
+          .split("")
+          .reverse()
+          .join("");
+
+      // Mostrar la información
+      alert(`Número de palabras: ${numeroPalabras}
+Primera palabra: ${primeraPalabra}
+Última palabra: ${ultimaPalabra}
+Palabras en orden inverso: ${palabrasInverso.join(" ")}
+Palabras ordenadas de la a la z: ${palabrasOrdenadasAZ.join(" ")}
+Palabras ordenadas de la z a la a: ${palabrasOrdenadasZA.join(" ")}
+${
+  esPalindromo ? "La frase es un palíndromo." : "La frase no es un palíndromo."
+}`);
+    </script>
+  </body>
+</html>

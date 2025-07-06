@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaVentas SYSTEM "listaVentas.dtd">
+<listaVentas>
+    <venta>
+        <importe>1000</importe>
+        <comprador>Jonatan</comprador>
+        <vendedor>Jose Finos</vendedor>
+        <fecha>2023/10/20</fecha>
+        <idFactura>001</idFactura>
+    </venta>
+</listaVentas>

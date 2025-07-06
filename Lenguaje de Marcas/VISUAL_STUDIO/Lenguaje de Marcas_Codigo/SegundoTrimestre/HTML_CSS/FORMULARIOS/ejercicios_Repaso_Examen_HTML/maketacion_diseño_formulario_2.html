@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetacion y diseño de Formulario. - Formulario registro - </title>
+    <link rel="stylesheet" href="maketacion_diseño_formulario_2.css">
+</head>
+
+
+<body>
+
+
+    <div id="contenedorPrincipal">
+
+        <h1>Formulario de registro</h1>
+
+        <form method="post" action="#">
+
+            <ul>
+                <!-- primer <li> Nombre y apellidos       -->
+                <li>
+                    <label class="titulo" for="nombre">Nombre y apellidos</label>
+
+                    <div class="controles">
+                        <span class="completo">
+                            <input id="nombre" name="nombre" value="">
+                            <label for="nombre">nombre</label>
+                        </span>
+
+                        <span class="completo">
+                            <input id="apellido1" name="apellido1" value="">
+                            <label for="apellido1">Primer apellido</label>
+                        </span>
+
+                        <span class="completo">
+                            <input id="apellido2" name="apellido2" value="">
+                            <label for="apellido2">Segundo apellido</label>
+                        </span>
+                    </div>
+                </li>
+
+
+                <!-- segundo <li> Direccion       -->
+
+                <li>
+                    <label  class="titulo" for="direccion">Dirección</label>
+
+                    <div class="controles">
+
+                        <span class="completo">
+                            <input id="direccion" name="direccion" value="">
+                            <label for="direccion">Calle, número, piso, puerta</label>
+                        </span>
+
+                        <span class="tercio">
+                            <input name="codigopostal" id="codigopostal">
+                            <label for="codigopostal">Código postal</label>
+                        </span>
+
+                        <span class="dostercios">
+                            <input name="municipio" id="municipio" value="">
+                            <label for="municipio">Municipio</label>
+                        </span>
+
+                        <span class="tercio">
+                            <select name="provincia" id="provincia">
+                                <option value="provincia1">Provincia 1</option>
+                                <option value="provincia1">Provincia 2</option>
+                                <option value="provincia1">Provincia 3</option>
+                            </select>
+                            <label for="provincia">Provincia</label>
+                        </span>
+
+                        <spa class="dostercios">
+                            <select name="pais" id="pais">
+                                <option value="pais1">Pais 1</option>
+                                <option value="pais2">Pais 2</option>
+                                <option value="pais3">Pais 3</option>
+                            </select>
+                            <label for="pais">País</label>
+                            </span>
+                    </div>
+                </li>
+
+                <!-- tercer <li> Email   -->
+
+                <li>
+                    <label class="titulo" for="email">Email</label>
+                    <div class="controles">
+                        <span class="completo">
+                            <input type="email" name="email" id="email">
+                            <label for="email">Email</label>
+                        </span>
+                    </div>
+                </li>
+
+                <!-- cuarto <li> Telefono  -->
+                <li>
+                    <label class="titulo" for="telefonofijo">Teléfono</label>
+
+                    <div class="controles">
+                        <span class="mitad">
+                            <input type="tel" id="telefonofijo" name="telefonofijo" value="">
+                            <label for="telefonofijo">Fijo</label>
+                        </span>
+                    </div>
+
+                    <div class="controles">
+                        <span class="mitad">
+                            <input type="tel" id="telefonomovil" name="telefonomovil" value="">
+                            <label for="telefonomovil">Móvil</label>
+                        </span>
+                    </div>
+                </li>
+
+                <!--  Boton Registrarse  -->
+                <li class="botones">
+                    <input id="alta" type="submit" value="Registrarse">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+
+</html>

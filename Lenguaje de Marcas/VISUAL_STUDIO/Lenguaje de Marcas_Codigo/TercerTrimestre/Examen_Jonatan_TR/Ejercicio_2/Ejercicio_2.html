@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Seleccionar Imagen</h1>
+    <form>
+        <label for="imagen">Selecciona una imagen:</label>
+        <select id="imagen" onchange="cambiarImagen()">
+            <option value="imagen_1.jfif">Foto 1</option>
+            <option value="imagen_2.jfif">Foto 2</option>
+        </select>
+    </form>
+    <img id="imagenMostrada" src="imagen_1.jfif" alt="Imagen 1">
+
+    <script>
+        function cambiarImagen() {
+            var select = document.getElementById("imagen");
+            var imagenMostrada = document.getElementById("imagenMostrada");
+            var nuevaImagen = select.value;
+            imagenMostrada.src = nuevaImagen;
+        }
+    </script>
+</body>
+
+</html>

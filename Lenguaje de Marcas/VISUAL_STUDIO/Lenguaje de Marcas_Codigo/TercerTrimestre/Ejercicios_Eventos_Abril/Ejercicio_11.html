@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evitar números en un input</title>
+  </head>
+  <body>
+    <input type="text" id="campoTexto" placeholder="Ingresa texto" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var campoTexto = document.getElementById("campoTexto");
+
+        campoTexto.addEventListener("keypress", function (event) {
+          // Obtener el código ASCII de la tecla presionada
+          var key = event.keyCode || event.which;
+
+          // Permitir solo letras (código ASCII 65-90 para mayúsculas y 97-122 para minúsculas)
+          if ((key >= 65 && key <= 90) || (key >= 97 && key <= 122)) {
+            return true;
+          } else {
+            // Si es un número, cancelar la acción
+            event.preventDefault();
+            return false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

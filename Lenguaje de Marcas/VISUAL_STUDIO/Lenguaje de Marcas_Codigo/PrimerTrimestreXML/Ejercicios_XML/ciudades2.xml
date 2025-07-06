@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ciudades [
+    <!ELEMENT ciudades (ciudad+)>
+    <!ELEMENT ciudad (nombre, capital?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT capital EMPTY>
+]>
+
+<ciudades>
+    <ciudad>
+        <nombre>Buenos Aires</nombre>
+        <capital/>
+    </ciudad>
+    <ciudad>
+        <nombre>Liverpool</nombre>
+    </ciudad>
+    <ciudad>
+        <nombre>Osaka</nombre>
+    </ciudad>
+    <ciudad>
+        <nombre>Oslo</nombre>
+        <capital/>
+    </ciudad>
+</ciudades>
+
+
+<!-- 
+
+Errores corregidos y explicación:
+
+En la definición del elemento <ciudades>, se cambió (ciudad) a (ciudad+) para permitir uno o más elementos <ciudad> dentro de <ciudades>. Esto asegura que <ciudades> puede contener múltiples <ciudad> en lugar de solo uno.
+
+En la definición del elemento <ciudad>, se cambió (capital) a (capital?) para indicar que <capital> es opcional. Esto permite que una ciudad no tenga un elemento <capital>, como en el caso de "Liverpool" y "Osaka" en tu XML original.
+
+Se eliminó el texto "Creando documentos XML válidos. Ficheros DTD. 23", ya que no es parte de la estructura XML y parece ser una inserción incorrecta.
+
+Con estas correcciones, el código XML es válido de acuerdo con el DTD interno proporcionado y cumple con las definiciones de elementos y sus relaciones.
+
+-->

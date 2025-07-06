@@ -1,0 +1,57 @@
+
+/* Estilos para el texto principal */
+body {
+    color: #00F;
+    background-color: #CFC;
+    font-family: 'Georgia', 'Cambria', serif;
+    font-size: 16px;
+}
+
+/* Estilos para los campos de datos del libro */
+.datosLista li {
+    color: blue;
+    border: none; /* Eliminar bordes predeterminados */
+}
+
+/* Estilos para el encabezado de nivel 1 */
+#tituloPrincipal {
+    color: #F00;
+    font-family: 'Verdana', 'Calibri', sans-serif;
+    font-size: 32px;
+    border-bottom: 2px solid #00F; /* Borde inferior de 2px, sólido y color azul */
+}
+
+/* Estilos para el encabezado de nivel 2 */
+h2 {
+    color: #A00;
+    font-family: 'Verdana', 'Calibri', sans-serif;
+    font-size: 24px;
+    border: 2px solid #AAA; /* Borde completo de 2px, sólido y color gris */
+}
+
+/* Estilos para "Internet" y "Web" como sustantivos */
+p strong {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilos para "Hypertext Markup Language" y "Cascading Style Sheets" */
+/* Acrónimos HTML y CSS */
+p em, p strong em {
+    color: #FFF;
+    background-color: #000;
+    font-style: italic;
+}
+
+/* Estilos para la lista con los datos del libro */
+.datosLista {
+    border-top: 4px dashed #F00; /* Borde superior de 4px, punteado y color rojo */
+    border-bottom: 4px dashed #F00; /* Borde inferior de 4px, punteado y color rojo */
+    padding: 8px; /* Agregar un espacio interno para mejorar la apariencia */
+}
+
+/* Estilos para la lista con el contenido del libro */
+.contenidoLista {
+    border: 2px dashed #0F0; /* Borde completo de 2px, con guiones y color verde */
+    padding: 8px; /* Agregar un espacio interno para mejorar la apariencia */
+}

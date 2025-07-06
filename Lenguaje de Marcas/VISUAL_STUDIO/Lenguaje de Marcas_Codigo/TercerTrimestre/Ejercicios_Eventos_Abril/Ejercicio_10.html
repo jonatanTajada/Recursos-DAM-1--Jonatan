@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botón al hacer scroll</title>
+    <style>
+      #botonScroll {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        padding: 10px 20px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: 2000px">Contenido largo...</div>
+    <button id="botonScroll" onclick="volverArriba()">Volver Arriba</button>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var botonScroll = document.getElementById("botonScroll");
+
+        if (document.documentElement.scrollTop > window.innerHeight) {
+          botonScroll.style.display = "block";
+        } else {
+          botonScroll.style.display = "none";
+        }
+      });
+
+      function volverArriba() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>

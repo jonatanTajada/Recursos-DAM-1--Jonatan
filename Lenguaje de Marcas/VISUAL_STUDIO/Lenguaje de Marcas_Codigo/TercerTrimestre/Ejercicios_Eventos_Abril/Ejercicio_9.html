@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apertura de bloques al presionar teclas</title>
+<style>
+    .bloque {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 10px;
+        display: none; /* Inicialmente ocultos */
+    }
+</style>
+</head>
+<body>
+
+<div id="ficha1" class="bloque">Bloque 1</div>
+<div id="ficha2" class="bloque">Bloque 2</div>
+<div id="ficha3" class="bloque">Bloque 3</div>
+
+<script>
+document.addEventListener("keydown", function(event) {
+    var bloque;
+    if (event.key === "1") {
+        bloque = document.getElementById("ficha1");
+    } else if (event.key === "2") {
+        bloque = document.getElementById("ficha2");
+    } else if (event.key === "3") {
+        bloque = document.getElementById("ficha3");
+    }
+
+    if (bloque) {
+        bloque.style.display = "block"; // Mostrar el bloque correspondiente
+    }
+});
+</script>
+
+</body>
+</html>

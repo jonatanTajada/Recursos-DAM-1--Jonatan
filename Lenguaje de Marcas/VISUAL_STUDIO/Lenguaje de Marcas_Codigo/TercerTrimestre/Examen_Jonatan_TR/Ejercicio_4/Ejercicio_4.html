@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <h1>Manipular Lista</h1>
+
+    <p>Introduce valores en la lista:</p>
+    <input type="number" id="inputValue">
+    <button onclick="añadirValor()">Añadir a la lista</button>
+
+    <ul id="listaValores">
+        <!-- aqui es donde tienen que ir los valores agregados -->
+    </ul>
+
+    <button onclick="mostrarValorMasPequeño()">Mostrar valor más pequeño</button>
+    <button onclick="multiplicarPor3()">Multiplicar por 3</button>
+
+    <script>
+        let valores = []; // Lista vacia
+
+        function añadirValor() {
+            const inputValue = document.getElementById("inputValue").value;
+            valores.push(Number(inputValue)); // Convertimos el valor a nuemro y se añadimos a la lista
+            actualizarLista();
+        }
+
+        function actualizarLista() {
+            const listaValores = document.getElementById("listaValores");
+            listaValores.innerHTML = ""; // Limpiamos la lista antes de actualizarla
+
+            for (let valor of valores) {
+                const li = document.createElement("li");
+                li.textContent = valor;
+                listaValores.appendChild(li);
+            }
+        }
+
+        function mostrarValorMasPequeño() {
+            const minimo = Math.min(...valores);
+            alert("El valor más pequeño es: " + minimo);
+        }
+
+        function multiplicarPor3() {
+            valores = valores.map(valor => valor * 3);
+            actualizarLista();
+        }
+    </script>
+
+</body>
+
+</html>

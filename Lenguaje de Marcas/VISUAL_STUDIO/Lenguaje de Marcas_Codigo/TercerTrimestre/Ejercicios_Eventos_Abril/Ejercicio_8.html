@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio dinámico de color al mover el ratón</title>
+<style>
+    #rojo, #azul, #blanco {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+
+<div id="rojo" onmouseover="cambioColor(this)" onmouseout="resetColor(this)" style="background-color: red;"></div>
+<div id="blanco" onmouseover="cambioColor(this)" onmouseout="resetColor(this)" style="background-color: white;"></div>
+<div id="azul" onmouseover="cambioColor(this)" onmouseout="resetColor(this)" style="background-color: blue;"></div>
+
+<script>
+function cambioColor(bloque) {
+    var central = document.getElementById("blanco");
+
+    if (bloque.id === "rojo") {
+        central.style.backgroundColor = "red";
+    } else if (bloque.id === "azul") {
+        central.style.backgroundColor = "blue";
+    }
+}
+
+function resetColor(bloque) {
+    var central = document.getElementById("blanco");
+    central.style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>

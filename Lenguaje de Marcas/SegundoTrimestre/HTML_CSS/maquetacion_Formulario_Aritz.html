@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color: #858585;
+        }
+        section{
+            background-color: white;
+            margin: auto;
+            width: 60%;
+        }
+        article{
+            text-align: right;
+            border-top: 1px solid #c3bfbf;
+            width: 90%;
+            margin: auto;
+            font-size: 10px;
+            font-family: Arial;
+        }
+        article:hover{
+            background-color: yellow;
+        }
+        p{
+            margin-right: 84%;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        ul{
+            margin-left: 15%;
+            text-align: left;
+            list-style: none;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+        input{
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        select {
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        input:focus {
+            border: none;
+            outline: 2px solid red;
+        }
+        footer {
+            height: 80px;
+            border-top: 1px solid #c3bfbf;
+            width: 90%;
+            margin: auto;
+        }
+        button{
+            margin-top: 10px;
+            height: 30px;
+            width: 110px;
+            margin-left: 87%;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #dir li{
+            display: inline-block;
+        }
+        #dir input{
+            width: 60%;
+        }
+        #dir select {
+            width: 90px;
+        }
+        #pais{
+            margin-left: 80px;
+        }
+        #ca{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h2>Formulario de Registro</h2>
+        </header>
+        <article>
+            <p>Nombre y apellidos</p>
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" name="nombre" required /><br />
+                        Nombre
+                    </li>
+                    <li>
+                        <input type="text" name="ape1" required /><br />
+                        Primer apellido
+                    </li>
+                    <li>
+                        <input type="text" name="ape2" required /><br />
+                        Segundo apellido
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <article>
+            <p>Direccion</p>
+            <form>
+                <ul id="dir">
+                    <li id="ca">
+                        <input type="text" name="ca"  required /><br />
+                        Calle, Numero, Piso, Puerta
+                    </li><br />
+                    <li>
+                        <input type="text" name="cod" required /><br />
+                        Codigo postal
+                    </li>
+                    <li>
+                        <input type="text" name="mun" required /><br />
+                        Municipio
+                    </li><br />
+                    <li>
+                        <select name="provincia" required>
+                            <option value="nada"></option>
+                            <option value="Araba">Araba</option>
+                            <option value="Bizkaia">Bizkaia</option>
+                            <option value="Gipuzkoa">Gipuzkoa</option>
+                        </select><br />
+                        Provincia
+                    </li>
+                    <li id="pais">
+                        <select name="provincia" required>
+                            <option value="nada"></option>
+                            <option value="Narnia">Narnia</option>
+                            <option value="Atlantis">Atlantis</option>
+                            <option value="Marte">Republica Federal Popular de Marte</option>
+                        </select><br />
+                        Pais
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <article>
+            <p>Email</p>
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" name="email" required /><br />
+                        Email
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <article>
+            <p>Telefono</p>
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" name="fijo" /><br />
+                        Fijo
+                    </li>
+                    <li>
+                        <input type="text" name="movil" required /><br />
+                        Movil
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <footer>
+               <button type="submit" value="registrar">Registrarse</button>
+        </footer>
+    </section>
+</body>
+</html>

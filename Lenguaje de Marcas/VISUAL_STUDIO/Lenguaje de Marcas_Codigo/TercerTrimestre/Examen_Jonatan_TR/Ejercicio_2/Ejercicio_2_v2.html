@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 2 version 2</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .imagenes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<h1>Cambiar Imagen con Botones</h1>
+<button onclick="mostrarImagen('imagen_1.jfif')">Foto 1</button>
+<button onclick="mostrarImagen('imagen_2.jfif')">Foto 2</button>
+<div id="contenedorImagen"></div>
+
+<script>
+    function mostrarImagen(rutaImagen) {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.innerHTML = ''; 
+
+        var imagen = document.createElement("img");
+        imagen.src = rutaImagen;
+        imagen.classList.add("imagen");
+
+        contenedor.appendChild(imagen);
+    }
+</script>
+</body>
+</html>

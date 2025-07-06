@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="agenda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "maximo" >
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minExclusive value="100"/>
+                            <xs:maxExclusive value="1000"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="persona">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name ="nombre" type="xs:string" />
+                            <xs:element name="ciudad" type="xs:string" minOccurs="0"/>
+                            <xs:element name="telefono" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="cp" minOccurs="0">
+                                <xs:simpleType>
+                                    <xs:restriction base= "xs:integer">
+                                        <xs:pattern value="[0-5]{1}[0-9]{4}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>  
+            </xs:sequence>
+            <xs:attribute name="tipo" type="xs:integer" use="optional"/>
+            <xs:attribute name = "clase" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

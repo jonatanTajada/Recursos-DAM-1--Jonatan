@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedad z-index</title>
+
+    <style>
+      .caja1 {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+      }
+
+      .caja2 {
+        width: 100px;
+        height: 100px;
+        background-color: #e74c3c;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <div class="caja1">Caja con z-index 1</div>
+    <div class="caja2">Caja con z-index 2</div>
+  </body>
+</html>
+
+<!-- 
+La propiedad z-index en CSS se utiliza para controlar el orden de apilamiento de los elementos posicionados en un diseño.
+ Es decir, determina qué elemento se superpone a otro cuando hay varios elementos en la misma posición o área en la página.
+
+El valor de z-index es un número entero, y un elemento con un z-index mayor se superpondrá a un elemento con un z-index menor.
+ Si dos elementos tienen el mismo z-index, el orden de apilamiento se basará en el orden en el que aparecen en el código HTML
+ (el último en el código estará más arriba).
+-->

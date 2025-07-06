@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostrar Hora y Día Actual</title>
+  </head>
+  <body>
+    <h1>Mostrar Hora y Día Actual</h1>
+    <p id="hora_actual"></p>
+    <p id="dia_actual"></p>
+
+    <script>
+      // Función para obtener la hora actual en formato HH:MM:SS
+      function obtenerHoraActual() {
+        const laHora = new Date();
+        const hora = laHora.getHours();
+        const minutos = laHora.getMinutes();
+        const segundos = laHora.getSeconds();
+        return `${hora}:${minutos}:${segundos}`;
+      }
+
+      // Función para obtener el día actual en formato día de la semana, mes día, año
+      function obtenerDiaActual() {
+        const laHora = new Date();
+        const opciones = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        return laHora.toLocaleDateString("es-ES", opciones);
+      }
+
+      // Función para actualizar la hora y el día en la página
+      function actualizarHoraYDia() {
+        document.getElementById("hora_actual").textContent =
+          "Hora actual: " + obtenerHoraActual();
+        document.getElementById("dia_actual").textContent =
+          "Día actual: " + obtenerDiaActual();
+      }
+
+      // Actualizar cada segundo
+      setInterval(actualizarHoraYDia, 1000);
+
+      // Mostrar la hora y el día al cargar la página
+      actualizarHoraYDia();
+    </script>
+  </body>
+</html>

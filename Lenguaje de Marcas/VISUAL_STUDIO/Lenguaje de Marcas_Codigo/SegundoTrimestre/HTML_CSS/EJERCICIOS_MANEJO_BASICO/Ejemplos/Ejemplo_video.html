@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación y Desarrollo</title>
+</head>
+<body>
+    <h2>Programación y Desarrollo</h2>
+
+    <!-- Video con múltiples opciones de control -->
+    <video width="800" height="450" controls autoplay loop>
+        <!-- Varias fuentes de video para mejorar la compatibilidad -->
+        <source src="programacion_video.mp4" type="video/mp4">
+        <source src="programacion_video.webm" type="video/webm">
+        
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <p>
+        Este video explora el emocionante mundo de la programación y desarrollo de software.
+        ¡Aprende a codificar y construir aplicaciones asombrosas!
+    </p>
+
+    <div>
+        <!-- Controles adicionales -->
+        <button onclick="document.querySelector('video').play()">Reproducir</button>
+        <button onclick="document.querySelector('video').pause()">Pausar</button>
+        <input type="range" value="1" min="0" max="2" step="0.1" oninput="changePlaybackRate(this.value)">
+        <label for="volume">Volumen:</label>
+        <input type="range" id="volume" value="1" min="0" max="1" step="0.1" oninput="changeVolume(this.value)">
+    </div>
+
+    <script>
+        function changePlaybackRate(value) {
+            document.querySelector('video').playbackRate = parseFloat(value);
+        }
+
+        function changeVolume(value) {
+            document.querySelector('video').volume = parseFloat(value);
+        }
+    </script>
+</body>
+</html>

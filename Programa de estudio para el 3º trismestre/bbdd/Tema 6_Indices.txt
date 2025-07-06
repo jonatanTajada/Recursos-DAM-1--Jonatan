@@ -1,0 +1,26 @@
+He leido y realizado los ejercicios en el tema.... 
+Hay que seguir practicando pero es facil...De momento lo comprendo bien..PRACTICA Y PRACTICA
+
+Se trata de crear indices para optimizar las consultas y que seasn mas eficientes en sus busquedas.
+
+---------------------------------------------------------------------------------------
+CREATE FULLTEXT INDEX idx_fulltext_nombre_descripcion ON productos (nombre, descripcion);
+
+SHOW INDEX FROM productos;
+DESCRIBE PRODUCTOS;
+---------------------------------------------------------------------------------------
+
+
+create fulltext index idx_nombre_descripcion on producto(nombre, descripcion);
+
+
+
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('+planta' IN BOOLEAN MODE);
+
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('planta' WITH QUERY EXPANSION);
+
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('planta*' IN BOOLEAN MODE);
+
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('tronco árbol' IN BOOLEAN MODE);
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('+tronco +árbol' IN BOOLEAN MODE);
+SELECT * FROM producto WHERE MATCH(nombre, descripcion) AGAINST('*tronco *árbol' IN BOOLEAN MODE);

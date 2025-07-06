@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE Biblioteca SYSTEM "biblioteca.dtd">
+<Biblioteca>
+    <Lista_libros>
+        <Libro titulo="Ángeles y Demonios" paginas="527">
+            <Autor>Dam Brown</Autor>
+            <Editorial>Otnemem</Editorial>
+        </Libro>
+        <Libro titulo="El código Da Vinci" paginas="469">
+            <Autor>Dam Brown</Autor>
+            <Editorial>Xirtam</Editorial>
+        </Libro>
+        <Libro titulo="Rompiendo límites" paginas="350">
+            <Autor>Sebastian Álvaro</Autor>
+            <Editorial>Omen</Editorial>
+        </Libro>
+        <Libro titulo="Al otro lado de la realidad" paginas="487">
+            <Autor>Pedro Dalmau</Autor>
+            <Editorial>Otnemem</Editorial>
+        </Libro>
+        <Libro titulo="Fortaleza Digital" paginas="798">
+            <Autor>Dan Brown</Autor>
+            <Editorial>Xirtam</Editorial>
+        </Libro>
+        <Libro titulo="La sombra de la Duda" paginas="1502">
+            <Autor>María Mendez</Autor>
+            <Editorial>lomax</Editorial>
+        </Libro>
+        <Libro titulo="sin Noticias de Gurb" paginas="124">
+            <Autor>Eduardo Mendoza</Autor>
+            <Editorial>Yresim</Editorial>
+        </Libro>
+    </Lista_libros>
+</Biblioteca>

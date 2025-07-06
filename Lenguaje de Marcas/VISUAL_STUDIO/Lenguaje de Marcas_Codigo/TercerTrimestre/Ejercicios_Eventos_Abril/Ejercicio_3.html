@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efectos del movimiento</title>
+<style>
+    #primerBloque {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        cursor: pointer;
+    }
+    #segundoBloque {
+        width: 200px;
+        height: 100px;
+        background-color: lightgray;
+        text-align: center;
+        line-height: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div id="primerBloque" onmouseover="color()">Pasa por aquí</div>
+<div id="segundoBloque">Efectos del movimiento</div>
+
+<script>
+function color() {
+    var segundoBloque = document.getElementById("segundoBloque");
+    segundoBloque.style.backgroundColor = "green";
+}
+</script>
+
+</body>
+</html>

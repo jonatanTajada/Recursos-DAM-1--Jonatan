@@ -1,0 +1,11 @@
+<!ELEMENT Libro (Titulo, Seccion, SubSeccion?, Contenido, Copyright)>
+<!ATTLIST Libro Catalogo ID #REQUIRED>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Seccion (#PCDATA)>
+<!ELEMENT SubSeccion (#PCDATA)>
+<!ELEMENT Contenido ((Capitulo+)|(Capitulo+, Separacion?)+)>
+<!ELEMENT Capitulo (Tema+)>
+<!ATTLIST Capitulo materia (XML|XHTML) "XML">
+<!ELEMENT Tema (#PCDATA)>
+<!ELEMENT Separacion EMPTY>
+<!ELEMENT Copyright (#PCDATA)>

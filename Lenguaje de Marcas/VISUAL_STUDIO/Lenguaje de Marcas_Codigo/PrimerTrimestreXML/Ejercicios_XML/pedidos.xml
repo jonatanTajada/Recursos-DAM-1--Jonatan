@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaPedidos SYSTEM "pedidos.dtd">
+<listaPedidos>
+    <pedido>
+        <idPedido>001</idPedido>
+        <cantidad>2uds</cantidad>
+        <peso>10kg</peso>
+    </pedido>
+</listaPedidos>

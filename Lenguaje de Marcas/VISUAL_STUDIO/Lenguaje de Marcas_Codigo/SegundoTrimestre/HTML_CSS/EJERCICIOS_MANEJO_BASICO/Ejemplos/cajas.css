@@ -1,0 +1,22 @@
+/* cajas.css */
+
+/*Estilo para el cuerpo*/
+body {
+    background-color: #f0f0f0; 
+  }
+  
+ /*Estilos para la section*/
+  section {
+    background-color: #ffffff;
+    padding: 20px; 
+  }
+  
+ /*Estilos para los article*/
+  article {
+    background-color: #dcdcdc; 
+    max-width: 100%;
+    height: 60px;
+    border: 1px solid blue; 
+    padding: 2px 25px 5px 34px; 
+  }
+  

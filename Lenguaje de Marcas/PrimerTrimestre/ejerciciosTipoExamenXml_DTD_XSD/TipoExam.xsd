@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="agenda" type="tipo_agenda"/>
+	<xs:complexType name="tipo_agenda">
+		<xs:sequence>
+			<xs:element name="maximo" type="tipo_maximo" minOccurs="0"/>
+			<xs:element name="persona" type="tipo_persona" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tipo_maximo">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="100"/>
+			<xs:maxInclusive value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipo_persona">
+		<xs:sequence>
+			<xs:element name="nombre" type="tipo_nombre_ciudad"/>
+			<xs:element name="ciudad" type="tipo_nombre_ciudad" minOccurs="0"/>
+			<xs:element name="cp" type="tipo_cp" minOccurs="0"/>
+			<xs:element name="tfno" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="clase" type="xs:string" use="required"/>
+		<xs:attribute name="tipo" type="xs:positiveInteger"/>
+	</xs:complexType>
+	<xs:simpleType name="tipo_nombre_ciudad">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="25"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipo_cp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-5][0-9][0-9][0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

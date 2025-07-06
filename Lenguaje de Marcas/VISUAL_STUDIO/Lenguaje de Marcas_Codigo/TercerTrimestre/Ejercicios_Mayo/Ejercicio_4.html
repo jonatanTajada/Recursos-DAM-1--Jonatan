@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de DNI</title>
+  </head>
+  <body>
+    <h1>Verificador de DNI</h1>
+
+    <script>
+      function verificarDNI(dni) {
+        // Verificar si el DNI tiene el formato correcto
+        const dniRegex = /^\d{8}[A-Z]$/;
+        if (!dniRegex.test(dni)) {
+          return false;
+        }
+
+        // Extraer el número del DNI
+        const numDNI = dni.substring(0, 8);
+
+        // Calcular la letra del DNI
+        const letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+        const letraCalculada = letrasDNI[numDNI % 23];
+
+        // Comparar la letra calculada con la letra del DNI introducida
+        const letraIntroducida = dni.charAt(8);
+        return letraCalculada === letraIntroducida;
+      }
+
+      // Pedir al usuario que introduzca el DNI
+      const dniInput = prompt(
+        "Introduce tu número de DNI (8 dígitos seguidos de una letra).\nPor ejemplo, 12345678Z:"
+      );
+
+      // Verificar el DNI y mostrar el resultado
+      const esDNICorrecto = verificarDNI(dniInput);
+      alert(`El DNI introducido es ${esDNICorrecto ? "válido" : "inválido"}.`);
+    </script>
+  </body>
+</html>

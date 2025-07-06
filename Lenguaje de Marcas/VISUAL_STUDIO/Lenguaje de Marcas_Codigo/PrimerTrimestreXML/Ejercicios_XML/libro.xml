@@ -1,0 +1,21 @@
+<!DOCTYPE Libro SYSTEM "libro.dtd">
+<Libro Catalogo="L12345">
+    <Titulo>Libro de Ejemplo</Titulo>
+    <Seccion>Introducción</Seccion>
+    <SubSeccion>Subsección 1</SubSeccion>
+    <Contenido>
+        <Capitulo materia="XML">
+            <Tema>Tema 1.1</Tema>
+            <Tema>Tema 1.2</Tema>
+        </Capitulo>
+        <Capitulo>
+            <Tema>Tema 2.1</Tema>
+        </Capitulo>
+        <Separacion/>
+        <Capitulo materia="XHTML">
+            <Tema>Tema 3.1</Tema>
+            <Tema>Tema 3.2</Tema>
+        </Capitulo>
+    </Contenido>
+    <Copyright>Derechos de autor © 2023</Copyright>
+</Libro>

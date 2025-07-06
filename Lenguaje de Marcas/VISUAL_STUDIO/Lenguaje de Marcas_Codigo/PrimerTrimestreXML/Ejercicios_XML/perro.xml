@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE perro [
+  <!ELEMENT perro (nombre, edad)>
+  <!ELEMENT edad (#PCDATA)>
+  <!ELEMENT nombre (#PCDATA)>
+]>
+
+<perro>
+    <nombre>Pancho</nombre>
+    <edad>8</edad>
+</perro>
+
+
+<!-- 
+
+En esta corrección, se cambió el orden de los elementos <nombre> y <edad> dentro del elemento <perro>
+para que coincida con la definición del DTD. Ahora el documento XML es válido de acuerdo con el DTD interno proporcionado.
+
+-->

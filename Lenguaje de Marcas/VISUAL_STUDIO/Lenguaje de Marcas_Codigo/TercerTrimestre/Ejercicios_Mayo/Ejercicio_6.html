@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 2</title>
+  </head>
+  <body>
+    <h1>Práctica 2</h1>
+
+    <h2>Sección 1</h2>
+    <p>Contenido de la sección 1</p>
+
+    <h2>Sección 2</h2>
+    <p>Contenido de la sección 2</p>
+
+    <h2>Sección 3</h2>
+    <p>Contenido de la sección 3</p>
+
+    <h2>Sección 4</h2>
+    <p>Contenido de la sección 4</p>
+
+    <img src= "imagen.jpeg" alt="Imagen 1" />
+    <img src="imagen.jpeg" alt="Imagen 2" />
+    <img src="imagen.jpeg" alt="Imagen 3" />
+
+    <script>
+      // Obtener todos los elementos h2
+      const elementosH2 = document.querySelectorAll("h2");
+      const numeroH2 = elementosH2.length;
+
+      // Mostrar el número de elementos h2
+      alert("Número de elementos h2: " + numeroH2);
+
+      // Obtener el penúltimo elemento h2 y su contenido
+      const penultimoH2 = elementosH2[numeroH2 - 2];
+      const contenidoPenultimoH2 = penultimoH2.textContent;
+
+      // Mostrar el contenido del penúltimo elemento h2
+      alert("Contenido del penúltimo elemento h2: " + contenidoPenultimoH2);
+
+      // Convertir el penúltimo elemento h2 en un elemento h1
+      const nuevoH1 = document.createElement("h1");
+      nuevoH1.textContent = contenidoPenultimoH2;
+      penultimoH2.parentNode.replaceChild(nuevoH1, penultimoH2);
+
+      // Cambiar el atributo src de todas las etiquetas img por "medusa.jpg"
+      const imagenes = document.querySelectorAll("img");
+      imagenes.forEach(function (img) {
+        img.setAttribute("src", "medusa.jpg");
+      });
+    </script>
+  </body>
+</html>

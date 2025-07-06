@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de multiplicación</title>
+</head>
+<body>
+
+<input type="number" id="numero1" placeholder="Ingrese el primer número">
+<input type="number" id="numero2" placeholder="Ingrese el segundo número">
+<button id="calcular">Calcular</button>
+<input type="text" id="total" placeholder="Resultado" readonly>
+
+<script>
+document.addEventListener("CargarDOM", function() {
+    var botonCalcular = document.getElementById("calcular");
+    botonCalcular.addEventListener("click", function() {
+        var numero1 = parseFloat(document.getElementById("numero1").value);
+        var numero2 = parseFloat(document.getElementById("numero2").value);
+        
+        var total = numero1 * numero2;
+        
+        document.getElementById("total").value = total;
+    });
+});
+
+// Lanzar el evento personalizado "CargarDOM"
+document.dispatchEvent(new Event("CargarDOM"));
+</script>
+
+</body>
+</html>

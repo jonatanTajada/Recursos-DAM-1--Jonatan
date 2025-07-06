@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="Ejercicio_1.css">
+</head>
+
+<body>
+    <form id="form">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" maxlength="15" required>
+        </div>
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="estudios">Estudios:</label>
+            <select id="estudios" name="estudios" required>
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="universidad" selected>Universidad</option>
+            </select>
+            
+        </div>
+        <div>
+            <input type="checkbox" id="condiciones" name="condiciones" required>
+            <label for="condiciones">Acepto las condiciones</label>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensaje-error" class="oculto"></div>
+
+    <script src="Ejercicio_1.js"></script>
+</body>
+
+</html>

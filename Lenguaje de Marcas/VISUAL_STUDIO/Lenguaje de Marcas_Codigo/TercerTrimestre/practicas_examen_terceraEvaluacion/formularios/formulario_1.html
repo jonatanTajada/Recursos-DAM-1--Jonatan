@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+<!--
+   1. defer asegura que el script se ejecute después de que el DOM esté completamente construido, pero antes de DOMContentLoaded, 
+      mientras mantiene el orden de ejecución.
+   2. async carga y ejecuta el script de forma asíncrona, sin bloquear el análisis del HTML,
+      y se ejecuta tan pronto como esté disponible, independientemente del orden de carga o del análisis del HTML.
+-->
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer formulario de practicas</title>
+    <link rel="stylesheet" href="formulario_1.css" />
+    <script src="formulario_1.js" defer></script>
+  </head>
+
+  <body>
+    <form>
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" id="nombre"  /><br />
+
+      <label for="apellidos">Apellidos: </label>
+      <input type="text" name="apellidos" id="apellidos"  /><br />
+
+      <label for="mensaje">Mensaje: </label>
+      <textarea name="mensaje" id="mensaje" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <!--listas--Agregar campos de seleccion-->
+      <label for="genero">Genero:</label>
+      <select name="genero" id="genero" >
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+        </select ><br />
+      <!--agregar campo de fecha con date-->
+      <label for="fecha_nacimiento">Fecha de nacimiento: </label>
+      <input
+        type="date"
+        name="fecha_nacimiento"
+        id="fecha_nacimiento"
+        
+      /><br /><br />
+      <!--radio buton-->
+        <label for="paises">Pais residente: </label><br><br>
+        <label for="españa">España</label>
+        <input type="radio" name="pais" id="españa" value="España" ><br>
+        <label for="francia">Francia</label>
+        <input type="radio" name="pais" id="francia" value="Francia" ><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+      <input type="submit" value="Enviar" /><br /><br />
+    </form>
+
+<!--para que cargue primero el dom y despues el archivo js-->
+   <!--
+     <script src="formulario_1.js"></script>
+   -->
+
+
+  </body>
+</html>

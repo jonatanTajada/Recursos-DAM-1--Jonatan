@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .contenedor {
+      width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      overflow: hidden; /* Esto evita que el contenedor colapse debido a los flotantes */
+    }
+
+    .flotante-izquierda {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      float: left; /* Flotar a la izquierda */
+      margin: 10px;
+    }
+
+    .flotante-derecha {
+      width: 150px;
+      height: 150px;
+      background-color: #e74c3c;
+      float: right; /* Flotar a la derecha */
+      margin: 10px;
+    }
+
+    .contenido {
+      margin: 10px;
+    }
+
+    /* Aplicación de la propiedad clear */
+    .limpiar-floats::after {
+      content: "";
+      display: table;
+      clear: ri;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor limpiar-floats">
+    <div class="flotante-izquierda">Flotante Izquierda</div>
+    <div class="flotante-derecha">Flotante Derecha</div>
+    <div class="contenido">
+      <p>Contenido que fluye alrededor de los elementos flotantes. Puedes agregar más texto aquí.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!--
+
+En este ejemplo, he creado una nueva clase llamada limpiar-floats y la he aplicado al contenedor principal. 
+Además, he agregado un pseudo-elemento ::after con la propiedad clear: both;. Esto se utiliza para limpiar los flotantes, 
+asegurando que el contenedor se expanda correctamente para rodear a los elementos flotantes.
+
+Explicación de la propiedad clear:
+La propiedad clear se utiliza para controlar el comportamiento de elementos adyacentes que flotan. 
+Puede tener los siguientes valores:
+
+none: No se aplica limpieza. Es el valor por defecto.
+left: El elemento no se colocará al lado de elementos flotantes que estén a la izquierda.
+right: El elemento no se colocará al lado de elementos flotantes que estén a la derecha.
+both: El elemento no se colocará al lado de elementos flotantes en ningún lado (limpia tanto a la izquierda como a la derecha).
+En este caso, hemos utilizado clear: both; para limpiar tanto elementos flotantes a la izquierda como a la derecha, 
+asegurando que el contenedor se expanda correctamente y no se vea afectado por los elementos flotantes.
+
+
+-->

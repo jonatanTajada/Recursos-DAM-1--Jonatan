@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Color de fondo del body */
+            width: calc(100% - 40px); /* Ancho de pantalla con márgenes laterales de 20px */
+            height: auto; /* Altura total de 585px (150px header + 340px article/nav + 95px footer) */
+        }
+
+        #contenedor {
+            display: flex;
+            border: 2px solid #ccc; /* Borde de 2px sólido */
+            flex-direction: column; /* Apila los elementos en dirección vertical */
+            margin: 20px; /* Márgenes laterales de 20px */
+            justify-content: center;
+            background-color: plum;
+        }
+
+        #contenedor-interno {
+            display: flex;
+            border: 1px solid #ccc; /* Borde de 2px sólido */
+            flex-direction: column; /* Apila los elementos en dirección vertical */
+            margin: 20px; /* Márgenes laterales de 20px */
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+        }
+
+        #contenedorArticleNav {
+            display: flex;
+            width: 100%; /* Ancho completo del contenedor */
+            height: 100%; /* Altura completa del contenedor */
+        }
+
+        header, article, nav, footer {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: purple; /* Fondo morado */
+            height: 150px; /* Altura de 150px */
+            width: 700px; /* Ancho completo del contenedor */
+            text-align: center;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        #contenedorArticleNav {
+            display: flex;
+            width: 700px; /* Ancho completo del contenedor */
+            height: 340px; /* Altura completa del contenedor */
+            /* justify-content:space-between; */ /* Alinea article y nav en los extremos */
+        }
+
+        article {
+            background-color: #ffa07a; /* Fondo naranja claro */
+            flex: 20 0 450px; /* Ancho de 450px */
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #98fb98; /* Fondo verde claro */
+            flex: 10 10 250px; /* Ancho de 250px */
+            padding: 20px;
+        }
+
+        footer {
+            background-color: purple; /* Fondo morado */
+            height: 95px; /* Altura de 95px */
+            width: 700px; /* Ancho completo del contenedor */
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="contenedor">
+
+
+        <div id="contenedor-interno">
+            <header>
+                Dentro &lt;header&gt;
+            </header>
+    
+            <div id="contenedorArticleNav">
+                <article>
+                    Dentro &lt;article&gt;
+                </article>
+    
+                <nav>
+                    Dentro &lt;nav&gt;
+                </nav>
+            </div>
+    
+            <footer>
+                Dentro &lt;footer&gt;
+            </footer>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

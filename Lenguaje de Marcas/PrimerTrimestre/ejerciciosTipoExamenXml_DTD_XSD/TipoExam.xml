@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "DTDTipoExam.dtd">
+<agenda>
+	<maximo>500</maximo>
+	<persona clase="contacto" tipo="3">
+		<nombre>Antonio Ramos Gando</nombre>
+		<ciudad>Zafra</ciudad>
+		<tfno>666-00.00.00</tfno>
+		<tfno>942-23.23.23</tfno>
+	</persona>
+	<persona clase="contacto">
+		<nombre>Juana Llera Zambrano</nombre>
+		<cp>06001</cp>
+		<tfno>677-00.00.00</tfno>
+	</persona>
+	<persona clase="contacto" tipo="1">
+		<nombre>Elena Rial Pedraza</nombre>
+		<cp>06310</cp>
+		<tfno>655-11.11.11</tfno>
+		<tfno>924-01.01.01</tfno>
+		<tfno>924-12.34.56</tfno>
+	</persona>
+</agenda>

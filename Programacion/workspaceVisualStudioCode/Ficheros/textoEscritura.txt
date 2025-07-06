@@ -1,0 +1,2 @@
+hola mundo!, esta linea estoy creando archivo y despues escribiendo.
+en esta linea estoy escribiendo, no creando, metiendo en el paramentro Filewriter -true-.

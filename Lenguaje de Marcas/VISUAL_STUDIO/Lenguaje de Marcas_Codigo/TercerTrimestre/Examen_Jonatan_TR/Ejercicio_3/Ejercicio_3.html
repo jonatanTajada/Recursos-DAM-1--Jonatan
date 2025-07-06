@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        /* Estilos para los contenedores */
+        .contenedor {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos para los titulos */
+        h2 {
+            color: #333;
+        }
+
+        /* Estilos para los botones */
+        .boton {
+            background-color: tomato;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor1" class="contenedor">
+        <h2>Contenedor 1</h2>
+        <p>Este es el contenido del primer contenedor.</p>
+        <button class="boton" onclick="mostrarSegundo()">Mostrar Segundo Contenedor</button>
+    </div>
+
+    <div id="contenedor2" class="contenedor" style="display: none;">
+        <h2>Contenedor 2</h2>
+        <p>Este es el contenido del segundo contenedor.</p>
+        <button class="boton" onclick="mostrarPrimero()">Mostrar Primer Contenedor</button>
+    </div>
+
+    <script>
+        function mostrarSegundo() {
+            document.getElementById("contenedor1").style.display = 'none';
+            document.getElementById("contenedor2").style.display = 'block';
+        }
+
+        function mostrarPrimero() {
+            document.getElementById("contenedor2").style.display = 'none';
+            document.getElementById("contenedor1").style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

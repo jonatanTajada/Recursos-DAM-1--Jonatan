@@ -1,0 +1,11 @@
+<!ELEMENT agenda (maximo*, persona*)>
+<!ELEMENT maximo (#PCDATA)>
+<!ELEMENT persona ((cp|ciudad), telefono+, cp)>
+<!ATTLIST persona
+    clase CDATA  #REQUIRED
+    tipo (1|2|3) CDATA #IMPLIED
+    >
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
